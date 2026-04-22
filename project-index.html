@@ -16,14 +16,14 @@
 
     <header class="project-index__header" aria-label="Project header">
       <div class="project-index__header-inner">
+        <div class="project-index__detail-title-panel">
+          <div class="project-index__detail-kicker">The House</div>
+          <h2 class="project-index__detail-title">Doctrine</h2>
+        </div>
+
         <div class="project-index__header-monogram-wrap" aria-hidden="true"><img src="assets/images/moscatelli-monogram.png" alt="" class="project-index__header-monogram" /></div>
 
-        <nav class="project-index__language-toggle" aria-label="Language selector">
-          <button type="button" class="project-index__language is-active" aria-pressed="true">English</button>
-          <button type="button" class="project-index__language" aria-pressed="false">Italiano</button>
-          <button type="button" class="project-index__language" aria-pressed="false">Español</button>
-          <button type="button" class="project-index__language" aria-pressed="false">Português</button>
-        </nav>
+        <button type="button" class="project-index__detail-return" aria-label="Return to section menu">Return</button>
       </div>
     </header>
 
@@ -51,19 +51,72 @@
       <div class="project-index__radial" aria-hidden="true">
         <div class="project-index__radial-label"></div>
         <div class="project-index__radial-shell">
-          <button type="button" class="project-index__radial-center" aria-label="Return to sections">Return</button>
+          <button type="button" class="project-index__radial-center" aria-label="Close section menu">Recede</button>
           <div class="project-index__radial-orbit">
             <button type="button" class="project-index__radial-item project-index__radial-item--north" data-slot="0">Subcategory I</button>
             <button type="button" class="project-index__radial-item project-index__radial-item--east" data-slot="1">Subcategory II</button>
             <button type="button" class="project-index__radial-item project-index__radial-item--south" data-slot="2">Subcategory III</button>
             <button type="button" class="project-index__radial-item project-index__radial-item--west" data-slot="3">Subcategory IV</button>
+            <button type="button" class="project-index__radial-item project-index__radial-item--northwest is-hidden" data-slot="4">Subcategory V</button>
           </div>
         </div>
       </div>
+      <div class="project-index__detail" aria-hidden="true">
+        <div class="project-index__detail-content" aria-live="polite">
+          <p class="project-index__detail-lede">Moscatelli is being arranged as a house of order, restraint, and permanent standards rather than seasonal noise.</p>
+          <div class="project-index__detail-copy">
+            <p>The present section is a working text panel for layout and rhythm. It gives each subtopic a proper reading surface while preserving the stillness of the composition.</p>
+            <p>We can later refine every sentence line by line, but the structure is now in place for a serious internal presentation.</p>
+          </div>
+        </div>
+        <nav class="project-index__detail-nav" aria-label="Subtopic navigation">
+          <button type="button" class="project-index__detail-nav-item" data-slot="0">Doctrine</button>
+          <button type="button" class="project-index__detail-nav-item" data-slot="1">Identity</button>
+          <button type="button" class="project-index__detail-nav-item" data-slot="2">Origins</button>
+          <button type="button" class="project-index__detail-nav-item" data-slot="3">Method</button>
+          <button type="button" class="project-index__detail-nav-item is-hidden" data-slot="4">Execution</button>
+        </nav>
+      </div>
+
 
     </section>
 
+
+
+    <div class="project-index__roadmap-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="roadmap-modal-title">
+      <div class="project-index__roadmap-modal-backdrop" data-roadmap-close></div>
+      <div class="project-index__roadmap-modal-panel">
+        <button type="button" class="project-index__roadmap-modal-close" aria-label="Close roadmap detail" data-roadmap-close>Close</button>
+        <div class="project-index__roadmap-modal-kicker">Roadmap</div>
+        <h3 class="project-index__roadmap-modal-title" id="roadmap-modal-title">Phase</h3>
+        <p class="project-index__roadmap-modal-subtitle"></p>
+        <div class="project-index__roadmap-modal-copy"></div>
+      </div>
+    </div>
+
+    <div class="project-index__profile-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="profile-modal-name">
+      <div class="project-index__profile-modal-backdrop" data-profile-close></div>
+      <div class="project-index__profile-modal-panel">
+        <button type="button" class="project-index__profile-modal-close" aria-label="Close profile detail" data-profile-close>Close profile</button>
+        <div class="project-index__profile-modal-media">
+          <img src="" alt="" class="project-index__profile-modal-image" />
+        </div>
+        <div class="project-index__profile-modal-content">
+          <div class="project-index__profile-modal-kicker">Leadership at launch</div>
+          <h3 class="project-index__profile-modal-name" id="profile-modal-name">Profile</h3>
+          <p class="project-index__profile-modal-role"></p>
+          <div class="project-index__profile-modal-copy"></div>
+        </div>
+      </div>
+    </div>
+
     <footer class="project-index__footer">
+      <nav class="project-index__language-toggle" aria-label="Language selector">
+        <button type="button" class="project-index__language" data-lang="it">Italiano</button>
+        <button type="button" class="project-index__language is-active" data-lang="en" aria-current="true">English</button>
+        <button type="button" class="project-index__language" data-lang="es">Español</button>
+        <button type="button" class="project-index__language" data-lang="pt">Português</button>
+      </nav>
       <div class="project-index__footer-disclaimer">Confidential · Not for distribution</div>
       <div class="project-index__footer-wordmark">MOSCATELLI</div>
     </footer>

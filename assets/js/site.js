@@ -99,8 +99,8 @@ const MOSCATELLI_I18N = {
             {
               "lede": "The first release is a proof event, not a vanity launch.",
               "paragraphs": [
-                "The launch model is deliberately narrow: a small initial pilot run sold direct online, supported by controlled digital acquisition and high-quality visual assets rather than broad distribution or premature wholesale.",
-                "Success is not defined by noise alone. The first release is intended to test production consistency, client response, and reorder demand while keeping scope, spend, and execution risk under control.",
+                "The launch model is deliberately narrow: a small initial pilot run sold direct online, supported by selective private outreach, founder-led introductions, measured digital acquisition, and high-quality visual assets rather than broad distribution or premature wholesale.",
+                "Success is not defined by noise alone. The first release is intended to test production consistency, orderly full-price sell-through, client response, and reorder demand while keeping scope, spend, and execution risk under control.",
                 "For investors, this matters because the launch is designed to convert early capital into evidence: whether Moscatelli can present, sell, and fulfil a first object credibly at full price before widening the house."
               ]
             }
@@ -128,21 +128,22 @@ const MOSCATELLI_I18N = {
               "lede": "The target market is narrow by design: full-price buyers who value discretion, material credibility, and controlled presentation.",
               "paragraphs": [
                 "The relevant comparison set is not mass premium or logo-led luxury. It is the quieter end of the market, where houses in Italy, France, and the United States compete through product quality, consistency of presentation, and price discipline rather than visual noise.",
-                "Moscatelli’s opening wedge is intentionally narrower still: a gift-relevant, size-light object sold direct online at €350, supported by high-quality visual assets, measured paid acquisition, and selective private outreach. The commercial question is not whether everyone will buy, but whether a small group of full-price clients will respond to a convincingly resolved first object from a new house.",
-                "That matters because the first proof phase is designed to test willingness to buy, not to simulate scale. If the client responds at full price, the house earns a stronger basis for repeat demand, referral, and measured category expansion."
+                "Moscatelli’s opening wedge is intentionally narrower still: a gift-relevant, size-light object sold direct online at €350. The price is intended to be serious enough to protect positioning, yet still realistic for a first object from a new house entering the market without inherited authority. Early demand is expected to come through selective private outreach, founder-led introductions, and measured paid acquisition rather than broad awareness-building.",
+                "That matters because the first proof phase is designed to answer a narrow commercial question, not to simulate scale: whether a small group of full-price clients will respond to a convincingly resolved first object from a new house. If the response is orderly at €350, the house earns a stronger basis for repeat demand, referral, and measured category expansion."
               ]
             },
             {
               "lede": "The roadmap is phased: prove one object, then widen the house without diluting the code.",
               "paragraphs": [
                 "Near term, the priority is to close Lotto I with discipline: resolve the remaining technical variables, validate suppliers, approve samples, and complete launch readiness before the first commercial move.",
-                "The path then becomes simple: run a controlled pilot, measure product legitimacy through client response and reorder demand, and widen only if the evidence justifies repetition."
+                "The path then becomes simple: run a controlled pilot, measure product legitimacy through client response and reorder demand, and widen only if the evidence justifies repetition.",
+                "A satisfactory pilot is not defined by noise alone. It should show production consistency against the approved standard, orderly full-price sell-through within a disciplined window, credible first-touch presentation, and evidence of repeat interest or reorder potential. If those signals do not appear, the correct response is refinement rather than forced scale."
               ]
             },
             {
               "lede": "Founder-led execution, with a lean operating partnership built for proof.",
               "paragraphs": [
-                "Moscatelli is being advanced through a deliberately concentrated structure: one clear authorial centre and one trusted operating partner, rather than an inflated early team presentation.",
+                "Moscatelli is led by its founder, Gianluca Moscatelli, and advanced through an intentionally compact structure: one clear authorial centre and one trusted operating partner, with early scope kept narrow so the first release can be executed with discipline rather than theatre.",
                 "Select either profile below to view the fuller execution role behind the launch."
               ],
               "foundersSection": {
@@ -153,63 +154,63 @@ const MOSCATELLI_I18N = {
                     "name": "Gianluca Moscatelli",
                     "role": "Founder & Creative Director",
                     "image": "assets/images/gianluca-founder.jpg",
-                    "bio": "Founder of the house and final approving authority across doctrine, product, presentation, and release.",
+                    "bio": "Leads the house and shapes its doctrine, product development, presentation standards, and launch discipline from the centre.",
                     "modalParagraphs": [
-                      "Gianluca Moscatelli founded the house and retains final approval across brand doctrine, product direction, presentation, and release. The identity, pacing, and operating standard of Moscatelli have been built founder-first rather than delegated too early.",
-                      "For an investor, this matters because authorship and accountability remain concentrated. The same person shaping the house’s aesthetic, product logic, and commercial tone is also responsible for protecting discipline at launch."
+                      "The house has been shaped through sustained founder-led work across doctrine, product development, presentation standards, and launch discipline. From the beginning, it has been built deliberately from first principles, with a narrow initial scope, controlled capital requirements, and a clear preference for proof before expansion.",
+                      "That approach governs the early structure of Moscatelli: one object selected for controlled proof, one release designed to test real market acceptance, and no premature expansion that would weaken the house at inception."
                     ]
                   },
                   {
                     "name": "Gabriela",
                     "role": "Marketing & Innovation Partner",
                     "image": "assets/images/gabriela-founder.jpg",
-                    "bio": "Supports positioning, launch thinking, and early commercial preparation as a close operating partner.",
+                    "bio": "Supports positioning, launch thinking, and early commercial preparation as a close strategic and operating partner.",
                     "modalParagraphs": [
-                      "Gabriela supports the house on positioning, launch thinking, and early commercial preparation, bringing prior startup, marketing, and innovation experience to the operating side of the launch.",
-                      "Her role complements the founder rather than diluting him: she strengthens market readiness, sharpens communication, and adds disciplined strategic support while final brand authority remains clearly centred."
+                      "Gabriela supports the venture as a close strategic and operating partner, contributing complementary marketing, startup, and innovation perspective to the project’s early development.",
+                      "The working structure remains intentionally compact: one clear authorial centre, one trusted counterpart, and a first release designed to establish seriousness before the house earns the right to broaden."
                     ]
                   }
                 ]
               }
             },
             {
-              "lede": "Moscatelli is seeking €15K in founder-stage loan capital to fund proof, not breadth.",
+              "lede": "Moscatelli is seeking €15K in private founder-stage loan capital to fund proof, not breadth.",
               "paragraphs": [
                 "The raise is intended to fund Lotto I pilot production and launch presentation: first-batch production, packaging, imagery, and controlled direct-to-client launch activity. It is deliberately narrow in scope and excludes travel and non-essential overhead.",
-                "The structure is a loan, not equity. Repayment is intended to come from Lotto I commercial proceeds and subsequent early sales activity, with 12% simple interest and a capped repayment profile to be finalised at closing.",
-                "The purpose of the capital is specific: complete the proof phase, test the first object under real market conditions, and establish whether Moscatelli can produce, present, sell, and fulfil credibly at full price. Participating lenders would also receive priority access in any future equity round."
+                "The structure is intended as a private loan rather than equity. At this stage the ask is modest by design: enough to complete the first proof phase properly without simulating a larger business than the house has earned.",
+                "The purpose of the capital is specific: convert a tightly defined first object into evidence on production consistency, price acceptance, client response, and orderly fulfilment under real market conditions. Terms would be finalised directly with participating lenders, with the current intention of 12% simple interest and repayment from Lotto I commercial proceeds and subsequent early sales activity."
               ],
               "economicsSection": {
-                "title": "Pilot economics (working assumptions)",
-                "note": "Items marked <strong>XXX</strong> remain subject to supplier quotation or final launch budgeting.",
+                "title": "Pilot economics (current working assumptions)",
+                "note": "Selected figures remain <strong>TBC</strong> pending supplier quotation or final launch budgeting.",
                 "items": [
                   {"label": "Retail price", "value": "€350"},
                   {"label": "Estimated unit production cost", "value": "€120"},
-                  {"label": "Pilot run", "value": "<strong>XXX</strong> units"},
-                  {"label": "Packaging cost per unit", "value": "€<strong>XXX</strong>"},
-                  {"label": "Target gross margin before launch acquisition", "value": "<strong>XXX</strong>%"},
-                  {"label": "Gross profit per unit before launch overhead", "value": "€<strong>XXX</strong>"},
-                  {"label": "Repayment window", "value": "<strong>XXX</strong> months"},
-                  {"label": "Founder capital committed to date", "value": "€<strong>XXX</strong>"}
+                  {"label": "Pilot run", "value": "<strong>TBC</strong> units"},
+                  {"label": "Packaging cost per unit", "value": "€<strong>TBC</strong>"},
+                  {"label": "Target gross margin before launch acquisition", "value": "<strong>TBC</strong>%"},
+                  {"label": "Gross profit per unit before launch overhead", "value": "€<strong>TBC</strong>"},
+                  {"label": "Repayment window", "value": "<strong>TBC</strong> months"},
+                  {"label": "Founder capital committed to date", "value": "€<strong>TBC</strong>"}
                 ]
               },
               "allocationSection": {
-                "title": "Use of funds (working allocation)",
+                "title": "Indicative use of funds",
                 "items": [
-                  {"label": "Pilot production", "value": "€<strong>XXX</strong>"},
-                  {"label": "Packaging", "value": "€<strong>XXX</strong>"},
-                  {"label": "Photography & video", "value": "€<strong>XXX</strong>"},
-                  {"label": "Paid launch acquisition", "value": "€<strong>XXX</strong>"},
-                  {"label": "Reserve / contingency", "value": "€<strong>XXX</strong>"}
+                  {"label": "Pilot production", "value": "€<strong>TBC</strong>"},
+                  {"label": "Packaging", "value": "€<strong>TBC</strong>"},
+                  {"label": "Photography & video", "value": "€<strong>TBC</strong>"},
+                  {"label": "Paid launch acquisition", "value": "€<strong>TBC</strong>"},
+                  {"label": "Reserve / contingency", "value": "€<strong>TBC</strong>"}
                 ]
               },
               "proofSection": {
                 "title": "What the capital must prove",
                 "items": [
                   "Production consistency against the approved standard",
-                  "Orderly full-price sell-through",
-                  "Positive early client feedback",
-                  "Reorder demand or repeat purchase intent",
+                  "Orderly full-price sell-through within the initial pilot window",
+                  "Positive early client feedback and first-touch credibility",
+                  "Reorder demand, repeat purchase intent, or private follow-on enquiry",
                   "Credible fulfilment and first-touch presentation"
                 ]
               }
