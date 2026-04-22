@@ -484,7 +484,7 @@ body {
 .project-index__header-monogram-wrap {
   position: absolute;
   left: 50%;
-  top: calc(50% - 0.34rem);
+  top: calc(50% - 0.12rem);
   transform: translate(-50%, -50%);
   display: grid;
   place-items: center;
@@ -521,7 +521,7 @@ body {
   object-fit: contain;
   image-rendering: auto;
   backface-visibility: hidden;
-  transform: translateY(0) translateZ(0);
+  transform: translateY(-0.04rem) translateZ(0);
   filter: brightness(0) saturate(100%) invert(92%) sepia(8%) saturate(404%) hue-rotate(345deg) brightness(104%) contrast(89%);
 }
 
@@ -2577,7 +2577,6 @@ body.is-detail-open .project-index__header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: none;
 }
 .project-index__profile-modal-content {
   display: grid;
@@ -2740,7 +2739,6 @@ body.is-detail-open .project-index__header {
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: none;
 }
 .project-index__profile-meta {
   display: grid;
