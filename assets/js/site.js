@@ -1305,12 +1305,12 @@ document.addEventListener('DOMContentLoaded', () => {
       [cta, disclaimer, wordmark].forEach(commitCurrentVisualState);
 
       cta.animate([
-        { opacity: getComputedStyle(cta).opacity, filter: getComputedStyle(cta).filter, transform: getComputedStyle(cta).transform === 'none' ? 'translateY(0)' : getComputedStyle(cta).transform },
+        { opacity: cta.style.opacity || '1', filter: cta.style.filter || 'none', transform: cta.style.transform === 'none' ? 'translateY(0)' : (cta.style.transform || 'translateY(0)') },
         { opacity: 0, filter: 'blur(14px)', transform: 'translateY(2px)' }
       ], { fill: 'forwards', duration: 360, easing: 'ease' });
 
       disclaimer.animate([
-        { opacity: getComputedStyle(disclaimer).opacity, filter: getComputedStyle(disclaimer).filter },
+        { opacity: disclaimer.style.opacity || '1', filter: disclaimer.style.filter || 'none' },
         { opacity: 0, filter: 'blur(14px)' }
       ], { fill: 'forwards', duration: 360, easing: 'ease' });
 
@@ -1321,7 +1321,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       setTimeout(() => {
         wordmark.animate([
-          { opacity: getComputedStyle(wordmark).opacity, filter: getComputedStyle(wordmark).filter },
+          { opacity: wordmark.style.opacity || '1', filter: wordmark.style.filter || 'none' },
           { opacity: 0, filter: 'blur(18px)' }
         ], { fill: 'forwards', duration: 620, easing: 'ease-in' });
       }, 300);
@@ -1350,7 +1350,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 550);
 
       cta.animate([
-        { opacity: getComputedStyle(cta).opacity, filter: getComputedStyle(cta).filter, transform: getComputedStyle(cta).transform === 'none' ? 'translateY(0)' : getComputedStyle(cta).transform },
+        { opacity: cta.style.opacity || '1', filter: cta.style.filter || 'none', transform: cta.style.transform === 'none' ? 'translateY(0)' : (cta.style.transform || 'translateY(0)') },
         { opacity: 0, filter: 'blur(14px)', transform: 'translateY(2px)' }
       ], { fill: 'forwards', duration: 900, easing: 'ease' });
       cta.style.setProperty('--cta-underline-opacity', '0');
@@ -1358,7 +1358,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       window.setTimeout(() => {
         disclaimer.animate([
-          { opacity: getComputedStyle(disclaimer).opacity, filter: getComputedStyle(disclaimer).filter },
+          { opacity: disclaimer.style.opacity || '1', filter: disclaimer.style.filter || 'none' },
           { opacity: 0, filter: 'blur(14px)' }
         ], { fill: 'forwards', duration: 900, easing: 'ease' });
       }, 180);
@@ -1372,7 +1372,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       window.setTimeout(() => {
         wordmark.animate([
-          { opacity: getComputedStyle(wordmark).opacity, filter: getComputedStyle(wordmark).filter },
+          { opacity: wordmark.style.opacity || '1', filter: wordmark.style.filter || 'none' },
           { opacity: 0, filter: 'blur(18px)' }
         ], { fill: 'forwards', duration: 1200, easing: 'ease-in' });
       }, 1180);
@@ -1416,12 +1416,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const detailLede = document.querySelector('.project-index__detail-lede');
   const detailCopy = document.querySelector('.project-index__detail-copy');
   const roadmapModal = document.querySelector('.project-index__roadmap-modal');
+  const roadmapModalPanel = document.querySelector('.project-index__roadmap-modal-panel');
   const roadmapModalTitle = document.querySelector('.project-index__roadmap-modal-title');
   const roadmapModalSubtitle = document.querySelector('.project-index__roadmap-modal-subtitle');
   const roadmapModalCopy = document.querySelector('.project-index__roadmap-modal-copy');
   const roadmapModalKicker = document.querySelector('.project-index__roadmap-modal-kicker');
   const roadmapModalClose = document.querySelector('.project-index__roadmap-modal-close');
   const profileModal = document.querySelector('.project-index__profile-modal');
+  const profileModalPanel = document.querySelector('.project-index__profile-modal-panel');
   const profileModalKicker = document.querySelector('.project-index__profile-modal-kicker');
   const profileModalName = document.querySelector('.project-index__profile-modal-name');
   const profileModalRole = document.querySelector('.project-index__profile-modal-role');
@@ -1441,7 +1443,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const syncModalLockState = () => {
     const hasOpenProfileModal = !!profileModal?.classList.contains('is-active');
     const hasOpenRoadmapModal = !!roadmapModal?.classList.contains('is-active');
-    body.classList.toggle('is-modal-open', hasOpenProfileModal || hasOpenRoadmapModal);
+    const hasOpenModal = hasOpenProfileModal || hasOpenRoadmapModal;
+    const hasSavedScroll = Object.prototype.hasOwnProperty.call(body.dataset, 'scrollY');
+
+    if (hasOpenModal) {
+      if (!hasSavedScroll) {
+        body.dataset.scrollY = String(window.scrollY);
+        body.style.position = 'fixed';
+        body.style.top = `-${window.scrollY}px`;
+        body.style.width = '100%';
+      }
+      body.classList.add('is-modal-open');
+      return;
+    }
+
+    if (hasSavedScroll) {
+      const savedY = Number(body.dataset.scrollY || 0);
+      body.style.position = '';
+      body.style.top = '';
+      body.style.width = '';
+      delete body.dataset.scrollY;
+      window.scrollTo(0, savedY);
+    }
+    body.classList.remove('is-modal-open');
   };
 
   const closeProfileModal = () => {
@@ -1486,9 +1510,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const standardNodes = [footerDisclaimer];
     cards.forEach((card) => {
       const title = card.querySelector('.project-card__title');
-      const body = card.querySelector('.project-card__body');
+      const cardBodyEl = card.querySelector('.project-card__body');
       if (title) standardNodes.push(title);
-      if (body) standardNodes.push(body);
+      if (cardBodyEl) standardNodes.push(cardBodyEl);
     });
 
     const radialNodes = [];
@@ -1633,7 +1657,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!section?.profiles?.length) return '';
     const highlights = buildProfileHighlightsHtml(section.highlights);
     const cta = section.cta || 'Open profile';
-    const cards = section.profiles.map((profile, index) => `
+    const profileCardsHtml = section.profiles.map((profile, index) => `
       <button type="button" class="project-index__profile-card" data-profile-index="${index}" aria-label="${cta}: ${profile.name}">
         <div class="project-index__profile-image-wrap">
           <img src="${profile.image}" alt="${profile.name}" class="project-index__profile-image" />
@@ -1653,7 +1677,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ${section.note ? `<p class="project-index__module-note">${section.note}</p>` : ''}
         </div>
         ${highlights}
-        <div class="project-index__profile-grid">${cards}</div>
+        <div class="project-index__profile-grid">${profileCardsHtml}</div>
       </section>
     `;
   };
@@ -1908,7 +1932,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (activeDetailSlot === null) return;
     activeDetailSlot = null;
     closeRoadmapModal();
-    detail.classList.remove('is-ready', 'is-switching', 'is-roadmap-view');
+    closeProfileModal();
+    detail.classList.remove('is-ready', 'is-switching', 'is-roadmap-view', 'is-founder-view');
     body.classList.remove('is-detail-open', 'is-detail-switching', 'is-detail-switching-in', 'is-mobile-detail-return-visible');
 
     if (toIndex && activeCard) {
@@ -1939,9 +1964,9 @@ document.addEventListener('DOMContentLoaded', () => {
     cards.forEach((card, index) => {
       const cardCopy = copy.project.cards[index];
       const title = card.querySelector('.project-card__title');
-      const body = card.querySelector('.project-card__body');
+      const cardBodyEl = card.querySelector('.project-card__body');
       if (title) title.textContent = cardCopy.title;
-      if (body) body.textContent = cardCopy.body;
+      if (cardBodyEl) cardBodyEl.textContent = cardCopy.body;
       const template = copy.project.cardOpenAria || '{title}';
       card.setAttribute('aria-label', formatProjectAria(template, { title: cardCopy.title || '' }));
     });
@@ -1960,6 +1985,8 @@ document.addEventListener('DOMContentLoaded', () => {
       detailTitle.textContent = detailCard.radial[activeDetailSlot] || '';
       detailReturn.textContent = copy.project.center;
       detailReturn.setAttribute('aria-label', copy.project.centerAria);
+      if (mobileDetailReturnLabel) mobileDetailReturnLabel.textContent = copy.project.mobileReturn || 'Return';
+      if (mobileDetailReturn) mobileDetailReturn.setAttribute('aria-label', copy.project.centerAria);
       if (detailLede) detailLede.textContent = detailSection?.lede || '';
       renderDetailCopy(detailCard, detailSection, activeDetailSlot);
       setRoadmapStateClass(detailCardIndex, activeDetailSlot);
@@ -2044,6 +2071,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+
+  const trapModalFocus = (event, modalPanel) => {
+    if (event.key !== 'Tab' || !modalPanel) return;
+    const focusable = Array.from(
+      modalPanel.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+    ).filter((el) => !el.disabled && el.offsetParent !== null);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+
   const closeRadial = (fromDetail = false) => {
     if (activeDetailSlot !== null && !fromDetail) {
       closeDetail({ toIndex: true });
@@ -2066,7 +2111,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 70);
 
     window.setTimeout(() => {
-      radial.classList.remove('is-active', 'is-closing');
+      radial.classList.remove('is-active', 'is-closing', 'is-pentagon');
       radial.setAttribute('aria-hidden', 'true');
       restoreCards();
       const focusTarget = previousFocus && typeof previousFocus.focus === 'function' ? previousFocus : activeCard;
@@ -2098,6 +2143,12 @@ document.addEventListener('DOMContentLoaded', () => {
     previousFocus = document.activeElement;
     cardsWrap.classList.add('is-menu-open');
     setRadialText(card);
+    const cardCopy = MOSCATELLI_I18N[activeLanguage].project.cards[getCardIndex(card)];
+    if ((cardCopy?.radial?.length ?? 0) >= 5) {
+      radial.classList.add('is-pentagon');
+    } else {
+      radial.classList.remove('is-pentagon');
+    }
     positionShellFromCard(card);
     radial.classList.add('is-active');
     radial.setAttribute('aria-hidden', 'false');
@@ -2198,14 +2249,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && profileModal?.classList.contains('is-active')) {
-      closeProfileModal();
+    if (profileModal?.classList.contains('is-active')) {
+      if (event.key === 'Escape') {
+        closeProfileModal();
+        return;
+      }
+      trapModalFocus(event, profileModalPanel);
       return;
     }
-    if (event.key === 'Escape' && roadmapModal?.classList.contains('is-active')) {
-      closeRoadmapModal();
+
+    if (roadmapModal?.classList.contains('is-active')) {
+      if (event.key === 'Escape') {
+        closeRoadmapModal();
+        return;
+      }
+      trapModalFocus(event, roadmapModalPanel);
       return;
     }
+
     onKeydown(event);
   });
 

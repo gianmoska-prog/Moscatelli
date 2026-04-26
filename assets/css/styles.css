@@ -1254,6 +1254,49 @@ body.is-language-switching .project-index__header .project-index__detail-return 
   transition-delay: 380ms;
 }
 
+/* ============================================================
+   PENTAGON DISTRIBUTION — 5-item cards only
+   72° intervals clockwise from top
+   sin/cos values: 0° 72° 144° 216° 288°
+   ============================================================ */
+
+.project-index__radial.is-pentagon.is-expanded .project-index__radial-item--north {
+  transform: translate(-50%, calc(-50% - var(--orbit-offset))) scale(1);
+  transition-delay: 40ms;
+}
+
+.project-index__radial.is-pentagon.is-expanded .project-index__radial-item--east {
+  transform: translate(
+    calc(-50% + calc(var(--orbit-offset) * 0.9511)),
+    calc(-50% - calc(var(--orbit-offset) * 0.309))
+  ) scale(1);
+  transition-delay: 80ms;
+}
+
+.project-index__radial.is-pentagon.is-expanded .project-index__radial-item--south {
+  transform: translate(
+    calc(-50% + calc(var(--orbit-offset) * 0.5878)),
+    calc(-50% + calc(var(--orbit-offset) * 0.809))
+  ) scale(1);
+  transition-delay: 130ms;
+}
+
+.project-index__radial.is-pentagon.is-expanded .project-index__radial-item--west {
+  transform: translate(
+    calc(-50% - calc(var(--orbit-offset) * 0.5878)),
+    calc(-50% + calc(var(--orbit-offset) * 0.809))
+  ) scale(1);
+  transition-delay: 200ms;
+}
+
+.project-index__radial.is-pentagon.is-expanded .project-index__radial-item--northwest {
+  transform: translate(
+    calc(-50% - calc(var(--orbit-offset) * 0.9511)),
+    calc(-50% - calc(var(--orbit-offset) * 0.309))
+  ) scale(1);
+  transition-delay: 270ms;
+}
+
 
 .project-index__radial.is-closing .project-index__radial-label,
 .project-index__radial.is-closing .project-index__radial-center,
