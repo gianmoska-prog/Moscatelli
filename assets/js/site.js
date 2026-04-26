@@ -1430,6 +1430,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const profileModalImage = document.querySelector('.project-index__profile-modal-image');
   const profileModalCopy = document.querySelector('.project-index__profile-modal-copy');
   const profileModalClose = document.querySelector('.project-index__profile-modal-close');
+  const desktopDetailScrollbar = document.querySelector('.project-index__desktop-scrollbar');
+  const desktopDetailScrollbarTrack = document.querySelector('.project-index__desktop-scrollbar-track');
+  const desktopDetailScrollbarThumb = document.querySelector('.project-index__desktop-scrollbar-thumb');
 
   if (!header || !cardsWrap || !cards.length || !footer || !atmosphere || !radial || !radialLabel || !radialShell || !radialCenter || !stage || !languageNav || !footerDisclaimer) return;
 
@@ -1439,6 +1442,60 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeLanguage = loadLanguage(fallbackLang);
   let isLanguageTransitioning = false;
   let activeDetailSlot = null;
+  let desktopScrollFrame = null;
+  let isDesktopScrollbarDragging = false;
+  let desktopScrollbarDragStartY = 0;
+  let desktopScrollbarDragStartScrollY = 0;
+  let desktopScrollbarNearLeaveTimer = null;
+
+  const getScrollMax = () => detailContent ? Math.max(0, detailContent.scrollHeight - detailContent.clientHeight) : 0;
+
+  const isDesktopDetailScrollbarEligible = () => (
+    window.innerWidth > 820 &&
+    body.classList.contains('is-detail-open') &&
+    !body.classList.contains('is-modal-open') &&
+    activeDetailSlot !== null
+  );
+
+  const syncDesktopDetailScrollbar = () => {
+    if (!desktopDetailScrollbar || !desktopDetailScrollbarTrack || !desktopDetailScrollbarThumb || !detailContent) return;
+
+    const scrollMax = getScrollMax();
+    const shouldShow = isDesktopDetailScrollbarEligible() && scrollMax > 12;
+    body.classList.toggle('is-desktop-detail-scrollable', shouldShow);
+
+    if (!shouldShow) {
+      isDesktopScrollbarDragging = false;
+      desktopDetailScrollbar.classList.remove('is-near', 'is-dragging');
+      return;
+    }
+
+    const trackRect = desktopDetailScrollbarTrack.getBoundingClientRect();
+    const thumbRect = desktopDetailScrollbarThumb.getBoundingClientRect();
+    const trackHeight = Math.max(trackRect.height, 1);
+    const thumbSize = Math.max(thumbRect.height || thumbRect.width || 7, 1);
+    const availableTrack = Math.max(trackHeight - thumbSize, 1);
+    const thumbY = Math.min(availableTrack, Math.max(0, (detailContent.scrollTop / scrollMax) * availableTrack));
+
+    desktopDetailScrollbar.style.setProperty('--desktop-detail-scroll-thumb-y', `${thumbY}px`);
+  };
+
+  const scheduleDesktopDetailScrollbar = () => {
+    if (desktopScrollFrame) return;
+    desktopScrollFrame = requestAnimationFrame(() => {
+      desktopScrollFrame = null;
+      syncDesktopDetailScrollbar();
+    });
+  };
+
+
+  const clearDesktopScrollbarNearState = () => {
+    if (desktopScrollbarNearLeaveTimer) {
+      window.clearTimeout(desktopScrollbarNearLeaveTimer);
+      desktopScrollbarNearLeaveTimer = null;
+    }
+    desktopDetailScrollbar?.classList.remove('is-near');
+  };
 
   const syncModalLockState = () => {
     const hasOpenProfileModal = !!profileModal?.classList.contains('is-active');
@@ -1454,6 +1511,8 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.width = '100%';
       }
       body.classList.add('is-modal-open');
+      clearDesktopScrollbarNearState();
+      scheduleDesktopDetailScrollbar();
       return;
     }
 
@@ -1466,6 +1525,7 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo(0, savedY);
     }
     body.classList.remove('is-modal-open');
+    scheduleDesktopDetailScrollbar();
   };
 
   const closeProfileModal = () => {
@@ -1859,6 +1919,7 @@ document.addEventListener('DOMContentLoaded', () => {
     detailCopy.innerHTML = `${paragraphsHtml}${roadmapHtml}${diagramHtml}${plateHtml}${foundersHtml}${economicsHtml}${allocationHtml}${scenarioHtml}${proofHtml}`;
     bindRoadmapActions();
     bindProfileActions(detailSection?.foundersSection);
+    scheduleDesktopDetailScrollbar();
   };
 
   const setDetailTexts = (slot) => {
@@ -1882,7 +1943,10 @@ document.addEventListener('DOMContentLoaded', () => {
     activeDetailSlot = slot;
     setDetailTexts(slot);
     body.classList.add('is-detail-open');
+    if (detailContent) detailContent.scrollTop = 0;
     resetMobileDetailReturnVisibility();
+    scheduleDesktopDetailScrollbar();
+    window.setTimeout(scheduleDesktopDetailScrollbar, 620);
     detail.classList.remove('is-ready', 'is-switching');
     detail.classList.add('is-active');
     detail.setAttribute('aria-hidden', 'false');
@@ -1919,11 +1983,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.setTimeout(() => {
       setDetailTexts(slot);
+      if (detailContent) detailContent.scrollTop = 0;
+      scheduleDesktopDetailScrollbar();
       detail.classList.add('is-switching');
       body.classList.add('is-detail-switching-in');
       window.setTimeout(() => {
         detail.classList.remove('is-switching');
         body.classList.remove('is-detail-switching', 'is-detail-switching-in');
+        scheduleDesktopDetailScrollbar();
       }, 420);
     }, 170);
   };
@@ -1934,7 +2001,9 @@ document.addEventListener('DOMContentLoaded', () => {
     closeRoadmapModal();
     closeProfileModal();
     detail.classList.remove('is-ready', 'is-switching', 'is-roadmap-view', 'is-founder-view');
-    body.classList.remove('is-detail-open', 'is-detail-switching', 'is-detail-switching-in', 'is-mobile-detail-return-visible');
+    body.classList.remove('is-detail-open', 'is-detail-switching', 'is-detail-switching-in', 'is-mobile-detail-return-visible', 'is-desktop-detail-scrollable');
+    clearDesktopScrollbarNearState();
+    scheduleDesktopDetailScrollbar();
 
     if (toIndex && activeCard) {
       body.classList.add('is-detail-returning-to-index');
@@ -1948,6 +2017,7 @@ document.addEventListener('DOMContentLoaded', () => {
       detail.classList.remove('is-active');
       detail.setAttribute('aria-hidden', 'true');
       body.classList.remove('is-detail-returning-to-index');
+      scheduleDesktopDetailScrollbar();
     }, 420);
   };
 
@@ -1991,6 +2061,7 @@ document.addEventListener('DOMContentLoaded', () => {
       renderDetailCopy(detailCard, detailSection, activeDetailSlot);
       setRoadmapStateClass(detailCardIndex, activeDetailSlot);
       syncDetailNavItems(detailCard, activeDetailSlot);
+      scheduleDesktopDetailScrollbar();
     }
 
     languageButtons.forEach((button) => {
@@ -2144,7 +2215,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cardsWrap.classList.add('is-menu-open');
     setRadialText(card);
     const cardCopy = MOSCATELLI_I18N[activeLanguage].project.cards[getCardIndex(card)];
-    if ((cardCopy?.radial?.length ?? 0) >= 5) {
+    if ((cardCopy?.radial?.length ?? 0) === 5) {
       radial.classList.add('is-pentagon');
     } else {
       radial.classList.remove('is-pentagon');
@@ -2169,6 +2240,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   applyProjectTranslations(activeLanguage);
+  scheduleDesktopDetailScrollbar();
 
   setTimeout(() => header.classList.add('is-visible'), 220);
 
@@ -2226,8 +2298,105 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  if (desktopDetailScrollbar && desktopDetailScrollbarTrack && desktopDetailScrollbarThumb) {
+    desktopDetailScrollbarTrack.addEventListener('pointerdown', (event) => {
+      if (!body.classList.contains('is-desktop-detail-scrollable')) return;
+      event.preventDefault();
+      const scrollMax = getScrollMax();
+      const trackRect = desktopDetailScrollbarTrack.getBoundingClientRect();
+      const thumbRect = desktopDetailScrollbarThumb.getBoundingClientRect();
+      const trackHeight = Math.max(trackRect.height, 1);
+      const availableTrack = Math.max(trackHeight - thumbRect.height, 1);
+
+      if (event.target === desktopDetailScrollbarThumb) {
+        isDesktopScrollbarDragging = true;
+        desktopScrollbarDragStartY = event.clientY;
+        desktopScrollbarDragStartScrollY = detailContent.scrollTop;
+        desktopDetailScrollbar.classList.add('is-dragging');
+        desktopDetailScrollbarTrack.setPointerCapture?.(event.pointerId);
+        return;
+      }
+
+      const targetY = Math.min(availableTrack, Math.max(0, event.clientY - trackRect.top - thumbRect.height / 2));
+      const targetScroll = (targetY / availableTrack) * scrollMax;
+      detailContent.scrollTo({ top: targetScroll, behavior: 'smooth' });
+    });
+
+    desktopDetailScrollbarTrack.addEventListener('pointermove', (event) => {
+      if (!isDesktopScrollbarDragging) return;
+      event.preventDefault();
+      const scrollMax = getScrollMax();
+      const trackRect = desktopDetailScrollbarTrack.getBoundingClientRect();
+      const thumbRect = desktopDetailScrollbarThumb.getBoundingClientRect();
+      const availableTrack = Math.max(trackRect.height - thumbRect.height, 1);
+      const deltaY = event.clientY - desktopScrollbarDragStartY;
+      const targetScroll = desktopScrollbarDragStartScrollY + (deltaY / availableTrack) * scrollMax;
+      detailContent.scrollTop = Math.min(scrollMax, Math.max(0, targetScroll));
+    });
+
+    const stopDesktopScrollbarDrag = (event) => {
+      if (!isDesktopScrollbarDragging) return;
+      isDesktopScrollbarDragging = false;
+      desktopDetailScrollbar.classList.remove('is-dragging');
+      if (desktopDetailScrollbarTrack.hasPointerCapture?.(event.pointerId)) {
+        desktopDetailScrollbarTrack.releasePointerCapture(event.pointerId);
+      }
+    };
+
+    desktopDetailScrollbarTrack.addEventListener('pointerup', stopDesktopScrollbarDrag);
+    desktopDetailScrollbarTrack.addEventListener('pointercancel', stopDesktopScrollbarDrag);
+
+    window.addEventListener('pointermove', (event) => {
+      if (!body.classList.contains('is-desktop-detail-scrollable') || body.classList.contains('is-modal-open')) {
+        clearDesktopScrollbarNearState();
+        return;
+      }
+      const railRect = desktopDetailScrollbar.getBoundingClientRect();
+      const railCenterX = railRect.left + railRect.width / 2;
+      const distanceX = Math.abs(event.clientX - railCenterX);
+      if (distanceX <= 82) {
+        if (desktopScrollbarNearLeaveTimer) {
+          window.clearTimeout(desktopScrollbarNearLeaveTimer);
+          desktopScrollbarNearLeaveTimer = null;
+        }
+        desktopDetailScrollbar.classList.add('is-near');
+        return;
+      }
+      if (!desktopScrollbarNearLeaveTimer && !isDesktopScrollbarDragging) {
+        desktopScrollbarNearLeaveTimer = window.setTimeout(() => {
+          desktopDetailScrollbar.classList.remove('is-near');
+          desktopScrollbarNearLeaveTimer = null;
+        }, 520);
+      }
+    }, { passive: true });
+  }
+
+  if (detailContent) {
+    detailContent.addEventListener('scroll', scheduleDesktopDetailScrollbar, { passive: true });
+  }
+
+  const routeDesktopDetailWheel = (event) => {
+    if (!isDesktopDetailScrollbarEligible() || getScrollMax() <= 0 || event.ctrlKey) return;
+    if (Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+    event.preventDefault();
+    detailContent.scrollTop = Math.min(getScrollMax(), Math.max(0, detailContent.scrollTop + event.deltaY));
+  };
+
+  window.addEventListener('wheel', routeDesktopDetailWheel, { passive: false });
+
   window.addEventListener('scroll', updateMobileDetailReturnVisibility, { passive: true });
   window.addEventListener('resize', updateMobileDetailReturnVisibility);
+  window.addEventListener('resize', scheduleDesktopDetailScrollbar);
+
+  if ('ResizeObserver' in window) {
+    const desktopDetailScrollbarResizeObserver = new ResizeObserver(() => scheduleDesktopDetailScrollbar());
+    if (detailContent) desktopDetailScrollbarResizeObserver.observe(detailContent);
+    if (detailCopy) desktopDetailScrollbarResizeObserver.observe(detailCopy);
+  }
+
+  if (document.fonts?.ready) {
+    document.fonts.ready.then(() => scheduleDesktopDetailScrollbar()).catch(() => {});
+  }
 
   radialCenter.addEventListener('click', (event) => {
     event.preventDefault();

@@ -3689,3 +3689,156 @@ body.is-modal-open .project-index__stage {
     pointer-events: none !important;
   }
 }
+
+
+
+@media (min-width: 821px) {
+  body.is-detail-open .project-index__detail-content,
+  body.is-detail-returning-to-index .project-index__detail-content {
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: clamp(0.75rem, 1.4vw, 1.25rem);
+    scrollbar-width: none;
+  }
+
+  body.is-detail-open .project-index__detail-content::-webkit-scrollbar,
+  body.is-detail-returning-to-index .project-index__detail-content::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ============================================================
+   DESKTOP DETAIL SCROLL RAIL — overflowing detail pages only
+   ============================================================ */
+.project-index__desktop-scrollbar {
+  --desktop-detail-scroll-thumb-y: 0px;
+  --desktop-detail-scroll-thumb-size: 0.42rem;
+  position: fixed;
+  left: clamp(0.9rem, 1.45vw, 1.65rem);
+  top: clamp(4.95rem, 8.6vh, 6.25rem);
+  bottom: clamp(4.45rem, 8.2vh, 5.95rem);
+  width: clamp(1.25rem, 1.55vw, 1.65rem);
+  z-index: 12;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 480ms cubic-bezier(0.22, 1, 0.36, 1);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+body.is-desktop-detail-scrollable:not(.is-modal-open) .project-index__desktop-scrollbar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+body.is-modal-open .project-index__desktop-scrollbar,
+body:not(.is-detail-open) .project-index__desktop-scrollbar {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.project-index__desktop-scrollbar-track {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+.project-index__desktop-scrollbar-track::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(242, 237, 229, 0.055) 10%,
+    rgba(242, 237, 229, 0.145) 50%,
+    rgba(242, 237, 229, 0.055) 90%,
+    transparent 100%
+  );
+  opacity: 0.62;
+  pointer-events: none;
+  transition:
+    opacity 320ms ease,
+    background 320ms ease;
+  mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+}
+
+.project-index__desktop-scrollbar.is-near .project-index__desktop-scrollbar-track::before,
+.project-index__desktop-scrollbar.is-dragging .project-index__desktop-scrollbar-track::before {
+  opacity: 1;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(242, 237, 229, 0.075) 10%,
+    rgba(242, 237, 229, 0.22) 50%,
+    rgba(242, 237, 229, 0.075) 90%,
+    transparent 100%
+  );
+}
+
+.project-index__desktop-scrollbar-thumb {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: var(--desktop-detail-scroll-thumb-size);
+  height: var(--desktop-detail-scroll-thumb-size);
+  border-radius: 50%;
+  transform: translate(-50%, var(--desktop-detail-scroll-thumb-y)) scale(0.82);
+  background: rgba(242, 237, 229, 0.42);
+  box-shadow:
+    0 0 0 1px rgba(242, 237, 229, 0.075),
+    0 0 12px rgba(242, 237, 229, 0.08),
+    0 0 22px rgba(120, 28, 28, 0.055);
+  cursor: grab;
+  opacity: 0;
+  pointer-events: auto;
+  transition:
+    opacity 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    background 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.project-index__desktop-scrollbar.is-near .project-index__desktop-scrollbar-thumb,
+.project-index__desktop-scrollbar.is-dragging .project-index__desktop-scrollbar-thumb {
+  opacity: 1;
+  transform: translate(-50%, var(--desktop-detail-scroll-thumb-y)) scale(1);
+  background: rgba(242, 237, 229, 0.56);
+}
+
+.project-index__desktop-scrollbar-thumb:hover,
+.project-index__desktop-scrollbar.is-dragging .project-index__desktop-scrollbar-thumb {
+  transform: translate(-50%, var(--desktop-detail-scroll-thumb-y)) scale(1.42);
+  background: rgba(242, 237, 229, 0.82);
+  box-shadow:
+    0 0 0 1px rgba(242, 237, 229, 0.11),
+    0 0 15px rgba(242, 237, 229, 0.12),
+    0 0 26px rgba(120, 28, 28, 0.075);
+}
+
+.project-index__desktop-scrollbar.is-dragging .project-index__desktop-scrollbar-thumb {
+  cursor: grabbing;
+}
+
+@media (max-width: 820px) {
+  .project-index__desktop-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-index__desktop-scrollbar,
+  .project-index__desktop-scrollbar-track::before,
+  .project-index__desktop-scrollbar-thumb {
+    transition: none !important;
+  }
+}
+
+
