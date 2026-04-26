@@ -17,6 +17,8 @@ const MOSCATELLI_I18N = {
       "profileModalKicker": "Leadership at launch",
       "profileModalClose": "Close profile",
       "profileModalCloseAria": "Close profile detail",
+      "cardOpenAria": "Open section: {title}",
+      "radialItemAria": "Open {label} section of {title}",
       "cards": [
         {
           "title": "The House",
@@ -174,28 +176,28 @@ const MOSCATELLI_I18N = {
               }
             },
             {
-              "lede": "Moscatelli is seeking €15K in private founder-stage loan capital to fund proof, not breadth.",
+              "lede": "Moscatelli is seeking €15K in private founder-stage loan capital to complete the first proof phase with discipline.",
               "paragraphs": [
-                "The raise is intended to fund Lotto I pilot production and launch presentation: first-batch production, packaging, imagery, and controlled direct-to-client launch activity. It is deliberately narrow in scope and excludes travel and non-essential overhead.",
-                "The structure is intended as a private loan rather than equity. At this stage the ask is modest by design: enough to complete the first proof phase properly without simulating a larger business than the house has earned.",
-                "The purpose of the capital is specific: convert a tightly defined first object into evidence on production consistency, price acceptance, client response, and orderly fulfilment under real market conditions. Terms would be finalised directly with participating lenders, with the current intention of 12% simple interest and repayment from Lotto I commercial proceeds and subsequent early sales activity."
+                "The raise is intended to fund Lotto I pilot production and launch presentation: first-batch production, packaging, imagery, and tightly controlled direct-to-client launch activity. It remains deliberately narrow in scope and excludes travel, salaries, and non-essential overhead.",
+                "The ask is structured as a private founder-stage loan rather than equity because the immediate objective is not to finance scale. It is to complete one controlled proof cycle properly, preserve ownership at inception, and avoid raising more capital than the house has yet earned the right to absorb.",
+                "The capital is intended to convert a tightly defined first object into evidence under real market conditions: production consistency, price acceptance, client response, and orderly fulfilment. Final terms would be agreed directly with participating lenders, with the present intention of 12% simple interest and repayment from Lotto I commercial proceeds and subsequent early sales activity."
               ],
               "economicsSection": {
-                "title": "Pilot economics (current working assumptions)",
-                "note": "Selected figures remain <strong>TBC</strong> pending supplier quotation or final launch budgeting.",
+                "title": "Pilot economics (working assumptions to be finalised before close)",
+                "note": "Figures marked <strong>TBC</strong> are being finalised through supplier quotation and final launch budgeting. They are shown provisionally rather than presented with false precision.",
                 "items": [
                   {"label": "Retail price", "value": "€350"},
                   {"label": "Estimated unit production cost", "value": "€120"},
-                  {"label": "Pilot run", "value": "<strong>TBC</strong> units"},
-                  {"label": "Packaging cost per unit", "value": "€<strong>TBC</strong>"},
-                  {"label": "Target gross margin before launch acquisition", "value": "<strong>TBC</strong>%"},
-                  {"label": "Gross profit per unit before launch overhead", "value": "€<strong>TBC</strong>"},
-                  {"label": "Repayment window", "value": "<strong>TBC</strong> months"},
+                  {"label": "Indicative pilot run", "value": "<strong>TBC</strong> units"},
+                  {"label": "Estimated packaging cost per unit", "value": "€<strong>TBC</strong>"},
+                  {"label": "Indicative gross margin before acquisition", "value": "<strong>TBC</strong>%"},
+                  {"label": "Indicative gross profit per unit before launch overhead", "value": "€<strong>TBC</strong>"},
+                  {"label": "Target repayment window", "value": "<strong>TBC</strong> months"},
                   {"label": "Founder capital committed to date", "value": "€<strong>TBC</strong>"}
                 ]
               },
               "allocationSection": {
-                "title": "Indicative use of funds",
+                "title": "Indicative use of funds (€15K)",
                 "items": [
                   {"label": "Pilot production", "value": "€<strong>TBC</strong>"},
                   {"label": "Packaging", "value": "€<strong>TBC</strong>"},
@@ -209,9 +211,9 @@ const MOSCATELLI_I18N = {
                 "items": [
                   "Production consistency against the approved standard",
                   "Orderly full-price sell-through within the initial pilot window",
-                  "Positive early client feedback and first-touch credibility",
-                  "Reorder demand, repeat purchase intent, or private follow-on enquiry",
-                  "Credible fulfilment and first-touch presentation"
+                  "Convincing first-touch presentation and fulfilment",
+                  "Positive early client feedback and repeat-purchase or reorder intent",
+                  "Evidence that Moscatelli can move from concept to disciplined commercial execution"
                 ]
               }
             }
@@ -238,6 +240,8 @@ const MOSCATELLI_I18N = {
       "profileModalKicker": "Leadership di lancio",
       "profileModalClose": "Chiudi profilo",
       "profileModalCloseAria": "Chiudi dettaglio profilo",
+      "cardOpenAria": "Apri sezione: {title}",
+      "radialItemAria": "Apri la sezione {label} di {title}",
       "cards": [
         {
           "title": "La Casa",
@@ -455,6 +459,8 @@ const MOSCATELLI_I18N = {
       "profileModalKicker": "Liderazgo de lanzamiento",
       "profileModalClose": "Cerrar perfil",
       "profileModalCloseAria": "Cerrar detalle del perfil",
+      "cardOpenAria": "Abrir sección: {title}",
+      "radialItemAria": "Abrir la sección {label} de {title}",
       "cards": [
         {
           "title": "La Casa",
@@ -668,6 +674,8 @@ const MOSCATELLI_I18N = {
       "profileModalKicker": "Liderança de lançamento",
       "profileModalClose": "Fechar perfil",
       "profileModalCloseAria": "Fechar detalhe do perfil",
+      "cardOpenAria": "Abrir seção: {title}",
+      "radialItemAria": "Abrir a seção {label} de {title}",
       "cards": [
         {
           "title": "A Casa",
@@ -1363,6 +1371,13 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   };
 
+  const formatProjectAria = (template, replacements) => {
+    if (!template) return '';
+    return Object.entries(replacements || {}).reduce((value, [key, replacement]) => {
+      return value.replace(new RegExp(`\\{${key}\\}`, 'g'), replacement ?? '');
+    }, template);
+  };
+
   const syncRadialItems = (cardCopy) => {
     radialItems.forEach((item, index) => {
       const label = cardCopy?.radial?.[index] || '';
@@ -1371,6 +1386,12 @@ document.addEventListener('DOMContentLoaded', () => {
       item.disabled = !label;
       item.setAttribute('aria-hidden', label ? 'false' : 'true');
       item.tabIndex = label ? 0 : -1;
+      if (label) {
+        const template = MOSCATELLI_I18N[activeLanguage]?.project?.radialItemAria || '{title}: {label}';
+        item.setAttribute('aria-label', formatProjectAria(template, { title: cardCopy?.title || '', label }));
+      } else {
+        item.removeAttribute('aria-label');
+      }
     });
   };
 
@@ -1504,6 +1525,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const body = card.querySelector('.project-card__body');
       if (title) title.textContent = cardCopy.title;
       if (body) body.textContent = cardCopy.body;
+      const template = copy.project.cardOpenAria || '{title}';
+      card.setAttribute('aria-label', formatProjectAria(template, { title: cardCopy.title || '' }));
     });
 
     if (activeCard) {
