@@ -14,6 +14,7 @@ const MOSCATELLI_I18N = {
       "languageAria": "Language selector",
       "center": "Recede",
       "centerAria": "Return to the index",
+      "mobileReturn": "Return",
       "profileModalKicker": "Leadership at launch",
       "profileModalClose": "Close profile",
       "profileModalCloseAria": "Close profile detail",
@@ -80,15 +81,48 @@ const MOSCATELLI_I18N = {
                 "Lotto I begins with a single object selected for clarity rather than breadth: a baby alpaca scarf designed to establish material standard, finish discipline, packaging quality, and price acceptance through one controlled release.",
                 "The choice is commercially rational as well as brand-appropriate. A scarf can carry the house’s tactile and visual codes clearly while avoiding the sizing, fit, and inventory complexity of early apparel.",
                 "For investors, that concentration matters because it puts early capital behind a manageable proof event: one product capable of generating evidence on quality consistency, client response, and reorder potential before broader expansion is considered."
-              ]
+              ],
+              "plateSection": {
+                "title": "Lotto I specification plate",
+                "note": "The opening object is defined narrowly to reduce ambiguity in sampling and preserve a disciplined first release.",
+                "items": [
+                  {"label": "Object", "value": "Baby alpaca scarf"},
+                  {"label": "Dimensions", "value": "190 × 31 cm"},
+                  {"label": "Target weight", "value": "205–215 g/m²"},
+                  {"label": "Surface", "value": "Compact matte finish"},
+                  {"label": "Drape", "value": "Controlled, architectural"},
+                  {"label": "Fringe", "value": "3.5–4 cm cut fringe"},
+                  {"label": "Initial colours", "value": "Bianco Avorio · Rosso Essenza accent"}
+                ]
+              },
+              "diagramSection": {
+                "title": "Proportion study",
+                "note": "A non-photographic study of the first object’s long, narrow proportion and disciplined fringe logic.",
+                "lengthLabel": "190 cm length",
+                "widthLabel": "31 cm width",
+                "fringeLabel": "3.5–4 cm fringe"
+              }
             },
             {
               "lede": "Technical precision is part of the business case.",
               "paragraphs": [
-                "The current Lotto I brief defines a 190 × 31 cm baby alpaca scarf with a target weight of 205–215 g/m², minimal brushing, a compact matte surface, and a 3.5 cm cut fringe with parallel threads and a structural transition band rather than a decorative border. Initial colours are deep chocolate brown and natural ecru.",
+                "The current Lotto I brief defines a 190 × 31 cm baby alpaca scarf with a target weight of 205–215 g/m², minimal brushing, a compact matte surface, and a 3.5–4 cm cut fringe with parallel threads and a structural transition band rather than a decorative border. The working colour direction is Bianco Avorio as the primary house surface, with Rosso Essenza reserved as a controlled accent rather than a broad colour field.",
                 "These decisions are not ornamental. They are intended to create a product that feels materially convincing at first touch, photographs with authority, and can support full-price positioning without relying on logo weight or trend cues.",
                 "For investors, the point is discipline. Precision at the brief stage reduces ambiguity in sampling, increases the likelihood of consistent output, and improves the odds that the first pilot run earns trust rather than excuses."
-              ]
+              ],
+              "plateSection": {
+                "title": "Material & finish controls",
+                "note": "The product brief now surfaces the tactile and visual controls that need to hold steady through development.",
+                "items": [
+                  {"label": "Fibre", "value": "Baby alpaca · 2-ply Nm 2/40–2/48"},
+                  {"label": "Brushing", "value": "Minimal"},
+                  {"label": "Surface halo", "value": "Near-invisible"},
+                  {"label": "Hand feel", "value": "Soft, substantial, composed"},
+                  {"label": "Transition", "value": "Structural band, not decorative border"},
+                  {"label": "Fringe threads", "value": "Straight and parallel"},
+                  {"label": "Photographic read", "value": "Clean, quiet, authoritative"}
+                ]
+              }
             },
             {
               "lede": "Packaging must reinforce the object, not overpower it.",
@@ -96,7 +130,19 @@ const MOSCATELLI_I18N = {
                 "Packaging is treated as part of the product experience, especially in a first release where receipt, gifting value, and first-touch credibility help shape perceived quality. The intention is exacting presentation, not decorative excess.",
                 "For an early ultra-luxury launch, that balance matters. Packaging must feel considered enough to support the price point and the tone of the house, while remaining disciplined in cost and proportion.",
                 "For investors, this matters because presentation influences perceived quality, but careless packaging spend can quickly erode early economics. Moscatelli’s objective is to support the object, not bury it under unnecessary theatre."
-              ]
+              ],
+              "plateSection": {
+                "title": "Presentation principles",
+                "note": "The presentation layer is treated as a supporting instrument of credibility rather than a decorative spectacle.",
+                "items": [
+                  {"label": "Presentation base", "value": "Ivory rigid box"},
+                  {"label": "Inner layer", "value": "Tissue wrap"},
+                  {"label": "House note", "value": "Handwritten letter insert"},
+                  {"label": "Accent ritual", "value": "Rosso Essenza wax seal"},
+                  {"label": "Spend logic", "value": "Disciplined relative to early economics"},
+                  {"label": "Brand effect", "value": "Reinforce perceived quality without decorative excess"}
+                ]
+              }
             },
             {
               "lede": "The first release is a proof event, not a vanity launch.",
@@ -104,7 +150,20 @@ const MOSCATELLI_I18N = {
                 "The launch model is deliberately narrow: a small initial pilot run sold direct online, supported by selective private outreach, founder-led introductions, measured digital acquisition, and high-quality visual assets rather than broad distribution or premature wholesale.",
                 "Success is not defined by noise alone. The first release is intended to test production consistency, orderly full-price sell-through, client response, and reorder demand while keeping scope, spend, and execution risk under control.",
                 "For investors, this matters because the launch is designed to convert early capital into evidence: whether Moscatelli can present, sell, and fulfil a first object credibly at full price before widening the house."
-              ]
+              ],
+              "plateSection": {
+                "title": "Proof-event structure",
+                "note": "The first release is framed as a tightly controlled test of commercial legitimacy, not as a broad awareness exercise.",
+                "items": [
+                  {"label": "Release model", "value": "Small initial pilot run"},
+                  {"label": "Channel", "value": "Direct online"},
+                  {"label": "Introductions", "value": "Selective private outreach"},
+                  {"label": "Commercial support", "value": "Founder-led introductions"},
+                  {"label": "Acquisition", "value": "Measured digital acquisition"},
+                  {"label": "Creative support", "value": "High-quality visual assets"},
+                  {"label": "Success signals", "value": "Sell-through, client response, reorder intent"}
+                ]
+              }
             }
           ]
         },
@@ -132,7 +191,17 @@ const MOSCATELLI_I18N = {
                 "The relevant comparison set is not mass premium or logo-led luxury. It is the quieter end of the market, where houses in Italy, France, and the United States compete through product quality, consistency of presentation, and price discipline rather than visual noise.",
                 "Moscatelli’s opening wedge is intentionally narrower still: a gift-relevant, size-light object sold direct online at €350. The price is intended to be serious enough to protect positioning, yet still realistic for a first object from a new house entering the market without inherited authority. Early demand is expected to come through selective private outreach, founder-led introductions, and measured paid acquisition rather than broad awareness-building.",
                 "That matters because the first proof phase is designed to answer a narrow commercial question, not to simulate scale: whether a small group of full-price clients will respond to a convincingly resolved first object from a new house. If the response is orderly at €350, the house earns a stronger basis for repeat demand, referral, and measured category expansion."
-              ]
+              ],
+              "plateSection": {
+                "title": "Benchmark frame",
+                "note": "Moscatelli is not positioned against mass premium. The reference field is quiet, material-led luxury, where established scarf and textile houses often sit in the mid-hundreds to €800+ equivalent range depending on fibre, scale, and house authority.",
+                "items": [
+                  {"label": "Reference houses", "value": "Loro Piana · Brunello Cucinelli · Begg x Co · Johnstons of Elgin"},
+                  {"label": "Moscatelli opening price", "value": "€350"},
+                  {"label": "Pricing logic", "value": "Serious but realistic for a new house"},
+                  {"label": "Commercial defence", "value": "Full-price integrity, 100-unit scarcity, direct founder-led relationship"}
+                ]
+              }
             },
             {
               "lede": "The roadmap is phased: prove one object, then widen the house without diluting the code.",
@@ -140,13 +209,25 @@ const MOSCATELLI_I18N = {
                 "Near term, the priority is to close Lotto I with discipline: resolve the remaining technical variables, validate suppliers, approve samples, and complete launch readiness before the first commercial move.",
                 "The path then becomes simple: run a controlled pilot, measure product legitimacy through client response and reorder demand, and widen only if the evidence justifies repetition.",
                 "A satisfactory pilot is not defined by noise alone. It should show production consistency against the approved standard, orderly full-price sell-through within a disciplined window, credible first-touch presentation, and evidence of repeat interest or reorder potential. If those signals do not appear, the correct response is refinement rather than forced scale."
-              ]
+              ],
+              "plateSection": {
+                "title": "Launch sequence",
+                "note": "The route to market is deliberately staged so capital funds proof rather than noise.",
+                "items": [
+                  {"label": "1", "value": "Resolve final scarf variables: fringe, dimensions, GSM"},
+                  {"label": "2", "value": "Mill outreach and validation: Prato first, then Biella"},
+                  {"label": "3", "value": "Sample approval and packaging confirmation"},
+                  {"label": "4", "value": "Photography and creative production"},
+                  {"label": "5", "value": "Private outreach, then online pilot release"},
+                  {"label": "6", "value": "Fulfilment, feedback loop, and reorder decision"}
+                ]
+              }
             },
             {
               "lede": "Founder-led execution, with a lean operating partnership built for proof.",
               "paragraphs": [
-                "Moscatelli is led by its founder, Gianluca Moscatelli, and advanced through an intentionally compact structure: one clear authorial centre and one trusted operating partner, with early scope kept narrow so the first release can be executed with discipline rather than theatre.",
-                "Select either profile below to view the fuller execution role behind the launch."
+                "Moscatelli is led by its founder, Gianluca Moscatelli, and advanced through an intentionally compact structure: one clear authorial centre and one named operating partner, Gabriela Fuzaro, with early scope kept narrow so the first release can be executed with discipline rather than theatre.",
+                "The structure is deliberately lean: creative authority, product doctrine, launch strategy, investor narrative, and São Paulo operational support are kept close enough to protect the first release before the house earns the right to expand."
               ],
               "foundersSection": {
                 "title": "Founder & operating partner",
@@ -156,20 +237,22 @@ const MOSCATELLI_I18N = {
                     "name": "Gianluca Moscatelli",
                     "role": "Founder & Creative Director",
                     "image": "assets/images/gianluca-founder.jpg",
-                    "bio": "Leads the house and shapes its doctrine, product development, presentation standards, and launch discipline from the centre.",
+                    "bio": "Leads the house and shapes its doctrine, creative direction, product development, presentation standards, and launch discipline from the centre.",
                     "modalParagraphs": [
-                      "The house has been shaped through sustained founder-led work across doctrine, product development, presentation standards, and launch discipline. From the beginning, it has been built deliberately from first principles, with a narrow initial scope, controlled capital requirements, and a clear preference for proof before expansion.",
-                      "That approach governs the early structure of Moscatelli: one object selected for controlled proof, one release designed to test real market acceptance, and no premature expansion that would weaken the house at inception."
+                      "Gianluca Moscatelli leads the house as founder and creative director, retaining final authority over doctrine, product direction, presentation standards, pricing discipline, and release pace. The house has been built through sustained founder-led work rather than outsourced brand decoration.",
+                      "His background spans Italy, Brazil, and Australia, with fluency across Italian, English, Spanish, and Portuguese. For the launch phase, that international operating perspective is paired with research-led luxury product development across textile sourcing, heritage positioning, packaging ritual, and lean capital discipline.",
+                      "For investors, the relevant point is accountability: the person defining the aesthetic, product specification, and commercial tone is also responsible for protecting the first release from premature breadth, weak pricing behaviour, or a narrative that outruns the object."
                     ]
                   },
                   {
-                    "name": "Gabriela",
+                    "name": "Gabriela Fuzaro",
                     "role": "Marketing & Innovation Partner",
                     "image": "assets/images/gabriela-founder.jpg",
-                    "bio": "Supports positioning, launch thinking, and early commercial preparation as a close strategic and operating partner.",
+                    "bio": "Supports market strategy, brand communications, launch architecture, investor narrative, and São Paulo operational oversight.",
                     "modalParagraphs": [
-                      "Gabriela supports the venture as a close strategic and operating partner, contributing complementary marketing, startup, and innovation perspective to the project’s early development.",
-                      "The working structure remains intentionally compact: one clear authorial centre, one trusted counterpart, and a first release designed to establish seriousness before the house earns the right to broaden."
+                      "Gabriela Fuzaro supports Moscatelli as marketing and innovation partner, contributing brand strategy, market positioning, launch strategy, business planning, innovation frameworks, and international operations perspective to the early proof phase.",
+                      "Her role is not to dilute the authorial centre of the house, but to strengthen the path to market: communications discipline, launch architecture, investor narrative support, and São Paulo operational oversight while the founder retains final brand and product authority.",
+                      "For investors, this creates a compact operating partnership rather than a decorative team page: founder-led authorship supported by a trusted commercial and strategic counterpart."
                     ]
                   }
                 ]
@@ -184,26 +267,35 @@ const MOSCATELLI_I18N = {
               ],
               "economicsSection": {
                 "title": "Pilot economics (working assumptions to be finalised before close)",
-                "note": "Figures marked <strong>TBC</strong> are being finalised through supplier quotation and final launch budgeting. They are shown provisionally rather than presented with false precision.",
+                "note": "Working assumptions pending final supplier quotation and launch budgeting. Figures are provisional but now structured enough to show the intended proof logic.",
                 "items": [
                   {"label": "Retail price", "value": "€350"},
                   {"label": "Estimated unit production cost", "value": "€120"},
-                  {"label": "Indicative pilot run", "value": "<strong>TBC</strong> units"},
-                  {"label": "Estimated packaging cost per unit", "value": "€<strong>TBC</strong>"},
-                  {"label": "Indicative gross margin before acquisition", "value": "<strong>TBC</strong>%"},
-                  {"label": "Indicative gross profit per unit before launch overhead", "value": "€<strong>TBC</strong>"},
-                  {"label": "Target repayment window", "value": "<strong>TBC</strong> months"},
-                  {"label": "Founder capital committed to date", "value": "€<strong>TBC</strong>"}
+                  {"label": "Pilot run", "value": "100 units"},
+                  {"label": "Estimated packaging cost per unit", "value": "€25–35"},
+                  {"label": "Indicative gross margin before acquisition", "value": "55–59%"},
+                  {"label": "Indicative gross profit per unit before launch overhead", "value": "€195–205"},
+                  {"label": "Target repayment window", "value": "12 months"},
+                  {"label": "Founder capital committed to date", "value": "Approx. €2,000–3,000"}
                 ]
               },
               "allocationSection": {
                 "title": "Indicative use of funds (€15K)",
                 "items": [
-                  {"label": "Pilot production", "value": "€<strong>TBC</strong>"},
-                  {"label": "Packaging", "value": "€<strong>TBC</strong>"},
-                  {"label": "Photography & video", "value": "€<strong>TBC</strong>"},
-                  {"label": "Paid launch acquisition", "value": "€<strong>TBC</strong>"},
-                  {"label": "Reserve / contingency", "value": "€<strong>TBC</strong>"}
+                  {"label": "Pilot production", "value": "€7,000"},
+                  {"label": "Packaging", "value": "€3,000"},
+                  {"label": "Photography & video", "value": "€2,000"},
+                  {"label": "Paid launch acquisition", "value": "€1,500"},
+                  {"label": "Reserve / contingency", "value": "€1,500"}
+                ]
+              },
+              "scenarioSection": {
+                "title": "Pilot outcome scenarios",
+                "note": "Revenue and gross profit are indicative and calculated before launch overhead and acquisition. Loan repayment remains targeted within 12 months.",
+                "items": [
+                  {"label": "Conservative", "value": "40 units · €14,000 revenue · €7,800–8,200 gross profit"},
+                  {"label": "Base", "value": "70 units · €24,500 revenue · €13,650–14,350 gross profit"},
+                  {"label": "Strong", "value": "100 units · €35,000 revenue · €19,500–20,500 gross profit"}
                 ]
               },
               "proofSection": {
@@ -237,6 +329,7 @@ const MOSCATELLI_I18N = {
       "languageAria": "Selettore lingua",
       "center": "Rientra",
       "centerAria": "Ritorna all’indice",
+      "mobileReturn": "Rientra",
       "profileModalKicker": "Leadership di lancio",
       "profileModalClose": "Chiudi profilo",
       "profileModalCloseAria": "Chiudi dettaglio profilo",
@@ -303,29 +396,87 @@ const MOSCATELLI_I18N = {
                 "Lotto I inizia con un solo oggetto scelto per chiarezza più che per ampiezza: una sciarpa in baby alpaca pensata per stabilire standard materiale, disciplina di finitura, qualità del packaging e accettazione del prezzo attraverso un rilascio controllato.",
                 "La scelta è commercialmente razionale oltre che coerente con il marchio. Una sciarpa può portare con chiarezza i codici tattili e visivi della casa evitando al tempo stesso la complessità di taglie, vestibilità e inventario tipica dell’abbigliamento iniziale.",
                 "Per un investitore, questa concentrazione conta perché concentra il capitale iniziale dietro un evento di prova gestibile: un prodotto capace di generare evidenza su costanza qualitativa, risposta del cliente e potenziale di riordino prima di considerare un’espansione più ampia."
-              ]
+              ],
+              "plateSection": {
+                "title": "Scheda specifiche Lotto I",
+                "note": "L’oggetto iniziale è definito in modo stretto per ridurre le ambiguità in campionatura e preservare un primo rilascio disciplinato.",
+                "items": [
+                  {"label": "Oggetto", "value": "Sciarpa in baby alpaca"},
+                  {"label": "Dimensioni", "value": "190 × 31 cm"},
+                  {"label": "Peso obiettivo", "value": "205–215 g/m²"},
+                  {"label": "Superficie", "value": "Finitura compatta e opaca"},
+                  {"label": "Caduta", "value": "Controllata, architettonica"},
+                  {"label": "Frangia", "value": "Frangia netta da 3,5–4 cm"},
+                  {"label": "Colori iniziali", "value": "Bianco Avorio · accento Rosso Essenza"}
+                ]
+              },
+              "diagramSection": {
+                "title": "Studio di proporzione",
+                "note": "Uno studio non fotografico della proporzione lunga e stretta del primo oggetto e della logica disciplinata della frangia.",
+                "lengthLabel": "190 cm lunghezza",
+                "widthLabel": "31 cm larghezza",
+                "fringeLabel": "3,5–4 cm frangia"
+              }
             },
             {
               "lede": "La precisione tecnica fa parte del caso economico.",
               "paragraphs": [
-                "Il brief attuale di Lotto I definisce una sciarpa in baby alpaca da 190 × 31 cm, con un obiettivo di peso di 205–215 g/m², spazzolatura minima, superficie compatta e opaca, e una frangia netta da 3,5 cm con fili paralleli e una banda strutturale di transizione invece di una bordura decorativa. I colori iniziali sono marrone cioccolato intenso ed ecru naturale.",
+                "Il brief attuale di Lotto I definisce una sciarpa in baby alpaca da 190 × 31 cm, con un obiettivo di peso di 205–215 g/m², spazzolatura minima, superficie compatta e opaca, e una frangia netta da 3,5 cm con fili paralleli e una banda strutturale di transizione invece di una bordura decorativa. La direzione cromatica di lavoro è Bianco Avorio come superficie primaria della casa, con Rosso Essenza riservato come accento controllato e non come campo colore dominante.",
                 "Queste scelte non sono ornamentali. Servono a creare un prodotto che risulti materialmente convincente al primo contatto, che fotografi con autorevolezza e che possa sostenere un posizionamento a prezzo pieno senza affidarsi al peso del logo o a segnali di tendenza.",
                 "Per un investitore, il punto è la disciplina. La precisione già nella fase di brief riduce le ambiguità in campionatura, aumenta la probabilità di un output coerente e migliora le possibilità che il primo lotto pilota costruisca fiducia invece di produrre giustificazioni."
-              ]
+              ],
+              "plateSection": {
+                "title": "Controlli di materiale e finitura",
+                "note": "Il brief rende ora più leggibili i controlli tattili e visivi che devono restare stabili lungo lo sviluppo.",
+                "items": [
+                  {"label": "Fibra", "value": "Baby alpaca · due capi Nm 2/40–2/48"},
+                  {"label": "Spazzolatura", "value": "Minima"},
+                  {"label": "Halo superficiale", "value": "Quasi invisibile"},
+                  {"label": "Mano", "value": "Morbida, sostanziale, composta"},
+                  {"label": "Transizione", "value": "Banda strutturale, non bordura decorativa"},
+                  {"label": "Fili della frangia", "value": "Dritti e paralleli"},
+                  {"label": "Resa fotografica", "value": "Pulita, quieta, autorevole"}
+                ]
+              }
             },
             {
               "lede": "Il packaging è trattato come parte del prodotto, non come strato ornamentale separato.",
               "paragraphs": [
                 "La logica di packaging di Moscatelli è ritualizzata e trattenuta: carte esatte, sequenza cerimoniale e precisione tattile che rafforzano l’autorità dell’oggetto invece di distrarne. L’intenzione è rendere la ricezione memorabile preservando un tono istituzionale, non decorativo.",
                 "Commercialmente, il packaging è una delle prime prove di serietà in una giovane casa ultra-lusso. Influenza la credibilità al primo contatto, il valore regalo e la distanza percepita tra l’oggetto e un normale bene premium."
-              ]
+              ],
+              "plateSection": {
+                "title": "Principi di presentazione",
+                "note": "Lo strato di presentazione è trattato come strumento di credibilità e non come spettacolo decorativo.",
+                "items": [
+                  {"label": "Ruolo", "value": "Sostenere l’oggetto"},
+                  {"label": "Tono", "value": "Esatto, quieto, non teatrale"},
+                  {"label": "Primo contatto", "value": "Credibilità immediata"},
+                  {"label": "Valore regalo", "value": "Elevato, senza eccessi"},
+                  {"label": "Logica di spesa", "value": "Disciplinata rispetto all’economia iniziale"},
+                  {"label": "Effetto sul brand", "value": "Rafforzare la qualità percepita"}
+                ]
+              }
             },
             {
               "lede": "Il modello di lancio è pilota, non vanitoso.",
               "paragraphs": [
                 "La prima uscita è impostata come test commerciale controllato con standard elevati, perimetro limitato e requisiti di prova chiari prima della scala. La governance interna privilegia evidenze, disciplina di fornitura e decisioni delimitate invece di comportamenti da grande annuncio o proliferazione prematura di categorie.",
                 "Questo approccio è strategicamente interessante perché protegge il segnale del marchio, limita consumo inutile di capitale e trasforma il primo prodotto in un evento commerciale capace di generare apprendimento reale."
-              ]
+              ],
+              "plateSection": {
+                "title": "Struttura dell’evento di prova",
+                "note": "Il primo rilascio è inquadrato come test controllato di legittimità commerciale, non come esercizio di awareness generalista.",
+                "items": [
+                  {"label": "Modello di rilascio", "value": "Piccolo lotto pilota iniziale"},
+                  {"label": "Canale", "value": "Diretto online"},
+                  {"label": "Introduzioni", "value": "Private outreach selettiva"},
+                  {"label": "Supporto commerciale", "value": "Introduzioni guidate dal fondatore"},
+                  {"label": "Acquisizione", "value": "Acquisizione digitale misurata"},
+                  {"label": "Supporto creativo", "value": "Asset visivi di alta qualità"},
+                  {"label": "Segnali di successo", "value": "Sell-through, risposta del cliente, intenzione di riordino"}
+                ]
+              }
             }
           ]
         },
@@ -382,7 +533,7 @@ const MOSCATELLI_I18N = {
                     ]
                   },
                   {
-                    "name": "Gabriela",
+                    "name": "Gabriela Fuzaro",
                     "role": "Partner Marketing & Innovazione",
                     "image": "assets/images/gabriela-founder.jpg",
                     "bio": "Sostiene posizionamento, pensiero di lancio e preparazione commerciale iniziale come partner operativa vicina alla casa.",
@@ -403,26 +554,35 @@ const MOSCATELLI_I18N = {
               ],
               "economicsSection": {
                 "title": "Economiche del pilot (ipotesi di lavoro)",
-                "note": "Le voci segnate con <strong>XXX</strong> restano soggette a quotazione fornitori o a budget finale di lancio.",
+                "note": "Assunzioni di lavoro soggette a quotazione fornitori e budget finale di lancio. Le cifre sono provvisorie ma strutturate per mostrare la logica di prova.",
                 "items": [
                   {"label": "Prezzo retail", "value": "€350"},
                   {"label": "Costo unitario di produzione stimato", "value": "€120"},
-                  {"label": "Pilot run", "value": "<strong>XXX</strong> unità"},
-                  {"label": "Costo packaging per unità", "value": "€<strong>XXX</strong>"},
-                  {"label": "Margine lordo obiettivo prima dell’acquisizione lancio", "value": "<strong>XXX</strong>%"},
-                  {"label": "Profitto lordo per unità prima dell’overhead di lancio", "value": "€<strong>XXX</strong>"},
-                  {"label": "Finestra di rimborso", "value": "<strong>XXX</strong> mesi"},
-                  {"label": "Capitale del fondatore già impegnato", "value": "€<strong>XXX</strong>"}
+                  {"label": "Pilot run", "value": "100 unità"},
+                  {"label": "Costo packaging per unità", "value": "€25–35"},
+                  {"label": "Margine lordo indicativo prima dell’acquisizione lancio", "value": "55–59%"},
+                  {"label": "Profitto lordo per unità prima dell’overhead di lancio", "value": "€195–205"},
+                  {"label": "Finestra di rimborso", "value": "12 mesi"},
+                  {"label": "Capitale del fondatore già impegnato", "value": "circa €2.000–3.000"}
                 ]
               },
               "allocationSection": {
                 "title": "Uso dei fondi (allocazione preliminare)",
                 "items": [
-                  {"label": "Produzione pilota", "value": "€<strong>XXX</strong>"},
-                  {"label": "Packaging", "value": "€<strong>XXX</strong>"},
-                  {"label": "Fotografia & video", "value": "€<strong>XXX</strong>"},
-                  {"label": "Acquisizione lancio a pagamento", "value": "€<strong>XXX</strong>"},
-                  {"label": "Riserva / contingenza", "value": "€<strong>XXX</strong>"}
+                  {"label": "Produzione pilota", "value": "€7.000"},
+                  {"label": "Packaging", "value": "€3.000"},
+                  {"label": "Fotografia & video", "value": "€2.000"},
+                  {"label": "Acquisizione lancio a pagamento", "value": "€1.500"},
+                  {"label": "Riserva / contingenza", "value": "€1.500"}
+                ]
+              },
+              "scenarioSection": {
+                "title": "Scenari del pilot",
+                "note": "Ricavi e profitto lordo sono indicativi e calcolati prima di overhead di lancio e acquisizione. Il rimborso resta mirato entro 12 mesi.",
+                "items": [
+                  {"label": "Conservativo", "value": "40 unità · €14.000 ricavi · €7.800–8.200 profitto lordo"},
+                  {"label": "Base", "value": "70 unità · €24.500 ricavi · €13.650–14.350 profitto lordo"},
+                  {"label": "Forte", "value": "100 unità · €35.000 ricavi · €19.500–20.500 profitto lordo"}
                 ]
               },
               "proofSection": {
@@ -456,6 +616,7 @@ const MOSCATELLI_I18N = {
       "languageAria": "Selector de idioma",
       "center": "Volver",
       "centerAria": "Volver al índice",
+      "mobileReturn": "Volver",
       "profileModalKicker": "Liderazgo de lanzamiento",
       "profileModalClose": "Cerrar perfil",
       "profileModalCloseAria": "Cerrar detalle del perfil",
@@ -519,28 +680,86 @@ const MOSCATELLI_I18N = {
               "paragraphs": [
                 "El producto inaugural es deliberadamente concentrado. En lugar de empezar con amplitud, Moscatelli inicia con una única categoría capaz de expresar con claridad los códigos de la casa: proporción, tacto, contención y ritual.",
                 "Esa concentración reduce la complejidad inicial, aclara la señal de marca y crea un punto de entrada disciplinado para probar calidad, demanda, cumplimiento y empaque en condiciones reales."
-              ]
+              ],
+              "plateSection": {
+                "title": "Ficha de especificaciones Lotto I",
+                "note": "El objeto inaugural se define con estrechez para reducir ambigüedad en muestreo y preservar un primer lanzamiento disciplinado.",
+                "items": [
+                  {"label": "Objeto", "value": "Bufanda de baby alpaca"},
+                  {"label": "Dimensiones", "value": "190 × 31 cm"},
+                  {"label": "Peso objetivo", "value": "205–215 g/m²"},
+                  {"label": "Superficie", "value": "Acabado compacto y mate"},
+                  {"label": "Caída", "value": "Controlada, arquitectónica"},
+                  {"label": "Fleco", "value": "Fleco recto de 3,5–4 cm"},
+                  {"label": "Colores iniciales", "value": "Bianco Avorio · acento Rosso Essenza"}
+                ]
+              },
+              "diagramSection": {
+                "title": "Estudio de proporción",
+                "note": "Un estudio no fotográfico de la proporción larga y estrecha del primer objeto y de la lógica disciplinada del fleco.",
+                "lengthLabel": "190 cm largo",
+                "widthLabel": "31 cm ancho",
+                "fringeLabel": "3,5–4 cm fleco"
+              }
             },
             {
               "lede": "El estándar material es preciso: baby alpaca, superficie lisa, caída controlada, fleco riguroso y ninguna indulgencia decorativa.",
               "paragraphs": [
-                "El brief técnico actual define una bufanda de 190 × 31 cm en baby alpaca fino, con peso objetivo de 205–215 g/m², cepillado mínimo, superficie compacta y mate, fleco recto de 3,5 cm con hilos paralelos y una banda estructural de transición en lugar de un borde visible. Los primeros colores son marrón chocolate profundo y ecru natural.",
+                "El brief técnico actual define una bufanda de 190 × 31 cm en baby alpaca fino, con peso objetivo de 205–215 g/m², cepillado mínimo, superficie compacta y mate, fleco recto de 3,5 cm con hilos paralelos y una banda estructural de transición en lugar de un borde visible. La dirección cromática de trabajo es Bianco Avorio como superficie primaria de la casa, con Rosso Essenza reservado como acento controlado y no como campo cromático dominante.",
                 "Para un inversor, esto demuestra un fundador dispuesto a fijar tolerancias medibles, aprobar contra estándares físicos e incorporar control de calidad desde el principio."
-              ]
+              ],
+              "plateSection": {
+                "title": "Controles de material y acabado",
+                "note": "El brief deja más visibles los controles táctiles y visuales que deben sostenerse durante el desarrollo.",
+                "items": [
+                  {"label": "Fibra", "value": "Baby alpaca · dos cabos Nm 2/40–2/48"},
+                  {"label": "Cepillado", "value": "Mínimo"},
+                  {"label": "Halo superficial", "value": "Casi invisible"},
+                  {"label": "Tacto", "value": "Suave, sustancial, sereno"},
+                  {"label": "Transición", "value": "Banda estructural, no borde decorativo"},
+                  {"label": "Hilos del fleco", "value": "Rectos y paralelos"},
+                  {"label": "Lectura fotográfica", "value": "Limpia, silenciosa, con autoridad"}
+                ]
+              }
             },
             {
               "lede": "La presentación se trata como parte del producto, no como un adorno separado.",
               "paragraphs": [
                 "La lógica de empaque de Moscatelli es ritualizada y contenida: papeles exactos, secuencia ceremonial y precisión táctil que refuerzan la autoridad del objeto.",
                 "Comercialmente, el empaque es una de las primeras pruebas de seriedad en una casa joven de ultra-lujo; influye en la credibilidad inicial, el valor de regalo y la distancia percibida frente al premium ordinario."
-              ]
+              ],
+              "plateSection": {
+                "title": "Principios de presentación",
+                "note": "La capa de presentación se entiende como instrumento de credibilidad y no como espectáculo decorativo.",
+                "items": [
+                  {"label": "Rol", "value": "Respaldar el objeto"},
+                  {"label": "Tono", "value": "Exacto, silencioso, no teatral"},
+                  {"label": "Primer contacto", "value": "Credibilidad inmediata"},
+                  {"label": "Valor de regalo", "value": "Alto, sin exceso"},
+                  {"label": "Lógica de gasto", "value": "Disciplinada frente a la economía inicial"},
+                  {"label": "Efecto de marca", "value": "Reforzar la calidad percibida"}
+                ]
+              }
             },
             {
               "lede": "El modelo de lanzamiento es piloto, no vanidoso.",
               "paragraphs": [
                 "La primera salida se plantea como una prueba comercial controlada con estándares altos, alcance limitado y pruebas claras antes de escalar. La gobernanza interna privilegia evidencia, disciplina con proveedores y decisiones acotadas en lugar de un gran anuncio sin sustancia.",
                 "Eso protege la señal de marca, limita el consumo innecesario de capital y convierte el primer producto en un evento comercial capaz de generar aprendizaje real."
-              ]
+              ],
+              "plateSection": {
+                "title": "Estructura del evento de prueba",
+                "note": "El primer lanzamiento se enmarca como test controlado de legitimidad comercial, no como ejercicio amplio de awareness.",
+                "items": [
+                  {"label": "Modelo de salida", "value": "Pequeña tirada piloto inicial"},
+                  {"label": "Canal", "value": "Directo online"},
+                  {"label": "Introducciones", "value": "Private outreach selectivo"},
+                  {"label": "Soporte comercial", "value": "Introducciones lideradas por el fundador"},
+                  {"label": "Adquisición", "value": "Adquisición digital medida"},
+                  {"label": "Soporte creativo", "value": "Activos visuales de alta calidad"},
+                  {"label": "Señales de éxito", "value": "Sell-through, respuesta del cliente, intención de reorder"}
+                ]
+              }
             }
           ]
         },
@@ -597,7 +816,7 @@ const MOSCATELLI_I18N = {
                     ]
                   },
                   {
-                    "name": "Gabriela",
+                    "name": "Gabriela Fuzaro",
                     "role": "Socia de Marketing & Innovación",
                     "image": "assets/images/gabriela-founder.jpg",
                     "bio": "Apoya posicionamiento, pensamiento de lanzamiento y preparación comercial inicial como socia operativa cercana a la casa.",
@@ -618,26 +837,35 @@ const MOSCATELLI_I18N = {
               ],
               "economicsSection": {
                 "title": "Economía del piloto (supuestos de trabajo)",
-                "note": "Los ítems marcados con <strong>XXX</strong> siguen sujetos a cotización de proveedores o al presupuesto final de lanzamiento.",
+                "note": "Supuestos de trabajo sujetos a cotización de proveedores y presupuesto final de lanzamiento. Las cifras son provisionales pero estructuradas para mostrar la lógica de prueba.",
                 "items": [
                   {"label": "Precio retail", "value": "€350"},
                   {"label": "Costo unitario estimado de producción", "value": "€120"},
-                  {"label": "Pilot run", "value": "<strong>XXX</strong> unidades"},
-                  {"label": "Costo de packaging por unidad", "value": "€<strong>XXX</strong>"},
-                  {"label": "Margen bruto objetivo antes de adquisición de lanzamiento", "value": "<strong>XXX</strong>%"},
-                  {"label": "Beneficio bruto por unidad antes de overhead de lanzamiento", "value": "€<strong>XXX</strong>"},
-                  {"label": "Ventana de repago", "value": "<strong>XXX</strong> meses"},
-                  {"label": "Capital del fundador comprometido hasta la fecha", "value": "€<strong>XXX</strong>"}
+                  {"label": "Pilot run", "value": "100 unidades"},
+                  {"label": "Costo de packaging por unidad", "value": "€25–35"},
+                  {"label": "Margen bruto indicativo antes de adquisición de lanzamiento", "value": "55–59%"},
+                  {"label": "Beneficio bruto por unidad antes de overhead de lanzamiento", "value": "€195–205"},
+                  {"label": "Ventana de repago", "value": "12 meses"},
+                  {"label": "Capital del fundador comprometido hasta la fecha", "value": "aprox. €2.000–3.000"}
                 ]
               },
               "allocationSection": {
                 "title": "Uso de los fondos (asignación preliminar)",
                 "items": [
-                  {"label": "Producción piloto", "value": "€<strong>XXX</strong>"},
-                  {"label": "Packaging", "value": "€<strong>XXX</strong>"},
-                  {"label": "Fotografía & video", "value": "€<strong>XXX</strong>"},
-                  {"label": "Adquisición pagada de lanzamiento", "value": "€<strong>XXX</strong>"},
-                  {"label": "Reserva / contingencia", "value": "€<strong>XXX</strong>"}
+                  {"label": "Producción piloto", "value": "€7.000"},
+                  {"label": "Packaging", "value": "€3.000"},
+                  {"label": "Fotografía & video", "value": "€2.000"},
+                  {"label": "Adquisición pagada de lanzamiento", "value": "€1.500"},
+                  {"label": "Reserva / contingencia", "value": "€1.500"}
+                ]
+              },
+              "scenarioSection": {
+                "title": "Escenarios del piloto",
+                "note": "Ingresos y beneficio bruto son indicativos y calculados antes de overhead de lanzamiento y adquisición. El repago sigue apuntando a 12 meses.",
+                "items": [
+                  {"label": "Conservador", "value": "40 unidades · €14.000 ingresos · €7.800–8.200 beneficio bruto"},
+                  {"label": "Base", "value": "70 unidades · €24.500 ingresos · €13.650–14.350 beneficio bruto"},
+                  {"label": "Fuerte", "value": "100 unidades · €35.000 ingresos · €19.500–20.500 beneficio bruto"}
                 ]
               },
               "proofSection": {
@@ -671,6 +899,7 @@ const MOSCATELLI_I18N = {
       "languageAria": "Seletor de idioma",
       "center": "Recuar",
       "centerAria": "Voltar ao índice",
+      "mobileReturn": "Recuar",
       "profileModalKicker": "Liderança de lançamento",
       "profileModalClose": "Fechar perfil",
       "profileModalCloseAria": "Fechar detalhe do perfil",
@@ -734,28 +963,86 @@ const MOSCATELLI_I18N = {
               "paragraphs": [
                 "O produto inaugural é deliberadamente concentrado. Em vez de começar com amplitude, a Moscatelli inicia com uma única categoria capaz de expressar com clareza os códigos da casa: proporção, toque, contenção e ritual.",
                 "Essa concentração reduz a complexidade inicial, esclarece o sinal da marca e cria um ponto de entrada disciplinado para testar qualidade, demanda, fulfilment e packaging em condições reais."
-              ]
+              ],
+              "plateSection": {
+                "title": "Ficha de especificações Lotto I",
+                "note": "O objeto inaugural é definido de forma estreita para reduzir ambiguidade na amostragem e preservar um primeiro lançamento disciplinado.",
+                "items": [
+                  {"label": "Objeto", "value": "Cachecol de baby alpaca"},
+                  {"label": "Dimensões", "value": "190 × 31 cm"},
+                  {"label": "Peso-alvo", "value": "205–215 g/m²"},
+                  {"label": "Superfície", "value": "Acabamento compacto e mate"},
+                  {"label": "Caimento", "value": "Controlado, arquitetónico"},
+                  {"label": "Franja", "value": "Franja reta de 3,5–4 cm"},
+                  {"label": "Cores iniciais", "value": "Bianco Avorio · acento Rosso Essenza"}
+                ]
+              },
+              "diagramSection": {
+                "title": "Estudo de proporção",
+                "note": "Um estudo não fotográfico da proporção longa e estreita do primeiro objeto e da lógica disciplinada da franja.",
+                "lengthLabel": "190 cm comprimento",
+                "widthLabel": "31 cm largura",
+                "fringeLabel": "3,5–4 cm franja"
+              }
             },
             {
               "lede": "O padrão material é preciso: baby alpaca, superfície lisa, caimento controlado, franja rigorosa e nenhuma indulgência decorativa.",
               "paragraphs": [
-                "O brief técnico atual define um cachecol de 190 × 31 cm em baby alpaca fino, com peso-alvo de 205–215 g/m², escovação mínima, superfície compacta e mate, franja reta de 3,5 cm com fios paralelos e uma banda estrutural de transição em vez de uma borda visível. As primeiras cores são marrom chocolate profundo e ecru natural.",
+                "O brief técnico atual define um cachecol de 190 × 31 cm em baby alpaca fino, com peso-alvo de 205–215 g/m², escovação mínima, superfície compacta e mate, franja reta de 3,5 cm com fios paralelos e uma banda estrutural de transição em vez de uma borda visível. A direção cromática de trabalho é Bianco Avorio como superfície primária da casa, com Rosso Essenza reservado como acento controlado e não como campo cromático dominante.",
                 "Para um investidor, isso demonstra um fundador disposto a definir tolerâncias mensuráveis, aprovar contra padrões físicos e incorporar controle de qualidade desde o início."
-              ]
+              ],
+              "plateSection": {
+                "title": "Controlo de material e acabamento",
+                "note": "O brief deixa mais visíveis os controlos táteis e visuais que precisam manter-se estáveis ao longo do desenvolvimento.",
+                "items": [
+                  {"label": "Fibra", "value": "Baby alpaca · dois cabos Nm 2/40–2/48"},
+                  {"label": "Escovação", "value": "Mínima"},
+                  {"label": "Halo superficial", "value": "Quase invisível"},
+                  {"label": "Toque", "value": "Suave, substancial, sereno"},
+                  {"label": "Transição", "value": "Banda estrutural, não borda decorativa"},
+                  {"label": "Fios da franja", "value": "Retos e paralelos"},
+                  {"label": "Leitura fotográfica", "value": "Limpa, silenciosa, com autoridade"}
+                ]
+              }
             },
             {
               "lede": "O packaging é tratado como parte do produto, e não como adorno separado.",
               "paragraphs": [
                 "A lógica de embalagem da Moscatelli é ritualizada e contida: papéis exatos, sequência cerimonial e precisão tátil que reforçam a autoridade do objeto.",
                 "Comercialmente, a embalagem é uma das primeiras provas de seriedade em uma casa jovem de ultra-luxo; influencia credibilidade inicial, valor de presente e a distância percebida em relação ao premium comum."
-              ]
+              ],
+              "plateSection": {
+                "title": "Princípios de apresentação",
+                "note": "A camada de apresentação é tratada como instrumento de credibilidade e não como espetáculo decorativo.",
+                "items": [
+                  {"label": "Papel", "value": "Sustentar o objeto"},
+                  {"label": "Tom", "value": "Exato, silencioso, não teatral"},
+                  {"label": "Primeiro contacto", "value": "Credibilidade imediata"},
+                  {"label": "Valor de presente", "value": "Elevado, sem excesso"},
+                  {"label": "Lógica de gasto", "value": "Disciplinada face à economia inicial"},
+                  {"label": "Efeito de marca", "value": "Reforçar a qualidade percebida"}
+                ]
+              }
             },
             {
               "lede": "O modelo de lançamento é piloto, não vaidoso.",
               "paragraphs": [
                 "A primeira saída é concebida como teste comercial controlado, com padrão alto, escopo limitado e provas claras antes da escala. A governança interna privilegia evidência, disciplina com fornecedores e decisões delimitadas.",
                 "Isso protege o sinal da marca, limita consumo desnecessário de capital e transforma o primeiro produto em um evento comercial capaz de gerar aprendizagem real."
-              ]
+              ],
+              "plateSection": {
+                "title": "Estrutura do evento de prova",
+                "note": "O primeiro lançamento é enquadrado como teste controlado de legitimidade comercial, e não como exercício amplo de awareness.",
+                "items": [
+                  {"label": "Modelo de saída", "value": "Pequeno pilot run inicial"},
+                  {"label": "Canal", "value": "Direto online"},
+                  {"label": "Introduções", "value": "Private outreach seletivo"},
+                  {"label": "Suporte comercial", "value": "Introduções lideradas pelo fundador"},
+                  {"label": "Aquisição", "value": "Aquisição digital medida"},
+                  {"label": "Suporte criativo", "value": "Ativos visuais de alta qualidade"},
+                  {"label": "Sinais de sucesso", "value": "Sell-through, resposta do cliente, intenção de reorder"}
+                ]
+              }
             }
           ]
         },
@@ -812,7 +1099,7 @@ const MOSCATELLI_I18N = {
                     ]
                   },
                   {
-                    "name": "Gabriela",
+                    "name": "Gabriela Fuzaro",
                     "role": "Parceira de Marketing & Inovação",
                     "image": "assets/images/gabriela-founder.jpg",
                     "bio": "Apoia posicionamento, pensamento de lançamento e preparação comercial inicial como parceira operacional próxima da casa.",
@@ -833,26 +1120,35 @@ const MOSCATELLI_I18N = {
               ],
               "economicsSection": {
                 "title": "Economia do piloto (pressupostos de trabalho)",
-                "note": "Os itens marcados com <strong>XXX</strong> continuam sujeitos a cotação de fornecedores ou ao orçamento final de lançamento.",
+                "note": "Assunções de trabalho sujeitas a cotação de fornecedores e orçamento final de lançamento. Os números são provisórios mas estruturados para mostrar a lógica de prova.",
                 "items": [
                   {"label": "Preço retail", "value": "€350"},
                   {"label": "Custo unitário estimado de produção", "value": "€120"},
-                  {"label": "Pilot run", "value": "<strong>XXX</strong> unidades"},
-                  {"label": "Custo de packaging por unidade", "value": "€<strong>XXX</strong>"},
-                  {"label": "Margem bruta alvo antes da aquisição de lançamento", "value": "<strong>XXX</strong>%"},
-                  {"label": "Lucro bruto por unidade antes do overhead de lançamento", "value": "€<strong>XXX</strong>"},
-                  {"label": "Janela de reembolso", "value": "<strong>XXX</strong> meses"},
-                  {"label": "Capital do fundador já comprometido", "value": "€<strong>XXX</strong>"}
+                  {"label": "Pilot run", "value": "100 unidades"},
+                  {"label": "Custo de packaging por unidade", "value": "€25–35"},
+                  {"label": "Margem bruta indicativa antes da aquisição de lançamento", "value": "55–59%"},
+                  {"label": "Lucro bruto por unidade antes do overhead de lançamento", "value": "€195–205"},
+                  {"label": "Janela de reembolso", "value": "12 meses"},
+                  {"label": "Capital do fundador já comprometido", "value": "aprox. €2.000–3.000"}
                 ]
               },
               "allocationSection": {
                 "title": "Uso dos fundos (alocação preliminar)",
                 "items": [
-                  {"label": "Produção piloto", "value": "€<strong>XXX</strong>"},
-                  {"label": "Packaging", "value": "€<strong>XXX</strong>"},
-                  {"label": "Fotografia & vídeo", "value": "€<strong>XXX</strong>"},
-                  {"label": "Aquisição paga de lançamento", "value": "€<strong>XXX</strong>"},
-                  {"label": "Reserva / contingência", "value": "€<strong>XXX</strong>"}
+                  {"label": "Produção piloto", "value": "€7.000"},
+                  {"label": "Packaging", "value": "€3.000"},
+                  {"label": "Fotografia & vídeo", "value": "€2.000"},
+                  {"label": "Aquisição paga de lançamento", "value": "€1.500"},
+                  {"label": "Reserva / contingência", "value": "€1.500"}
+                ]
+              },
+              "scenarioSection": {
+                "title": "Cenários do piloto",
+                "note": "Receita e lucro bruto são indicativos e calculados antes de overhead de lançamento e aquisição. O reembolso continua apontado para 12 meses.",
+                "items": [
+                  {"label": "Conservador", "value": "40 unidades · €14.000 receita · €7.800–8.200 lucro bruto"},
+                  {"label": "Base", "value": "70 unidades · €24.500 receita · €13.650–14.350 lucro bruto"},
+                  {"label": "Forte", "value": "100 unidades · €35.000 receita · €19.500–20.500 lucro bruto"}
                 ]
               },
               "proofSection": {
@@ -875,6 +1171,15 @@ const MOSCATELLI_I18N = {
 
 function saveLanguage(lang) {
   try { window.localStorage.setItem('moscatelliLanguage', lang); } catch (_) {}
+}
+
+function loadLanguage(fallback = 'en') {
+  try {
+    const stored = window.localStorage.getItem('moscatelliLanguage');
+    return MOSCATELLI_I18N[stored] ? stored : fallback;
+  } catch (_) {
+    return fallback;
+  }
 }
 
 
@@ -962,7 +1267,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (page === 'threshold') {
-    applyThresholdTranslations(fallbackLang);
+    applyThresholdTranslations(loadLanguage(fallbackLang));
 
     const cta = document.querySelector('.threshold__cta');
     const disclaimer = document.querySelector('.threshold__disclaimer');
@@ -1098,11 +1403,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerDisclaimer = document.querySelector('.project-index__footer-disclaimer');
   const detail = document.querySelector('.project-index__detail');
   const detailReturn = document.querySelector('.project-index__detail-return');
+  const mobileDetailReturn = document.querySelector('.project-index__mobile-detail-return');
+  const mobileDetailReturnLabel = document.querySelector('.project-index__mobile-detail-return-label');
   const detailTitlePanel = document.querySelector('.project-index__detail-title-panel');
   const detailKicker = document.querySelector('.project-index__detail-kicker');
   const detailTitle = document.querySelector('.project-index__detail-title');
   const detailNav = document.querySelector('.project-index__detail-nav');
   const detailNavItems = Array.from(document.querySelectorAll('.project-index__detail-nav-item'));
+  const mobileDetailNav = document.querySelector('.project-index__mobile-topic-nav');
+  const mobileDetailNavItems = Array.from(document.querySelectorAll('.project-index__mobile-topic-nav-item'));
   const detailContent = document.querySelector('.project-index__detail-content');
   const detailLede = document.querySelector('.project-index__detail-lede');
   const detailCopy = document.querySelector('.project-index__detail-copy');
@@ -1125,15 +1434,22 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeCard = null;
   let isAnimating = false;
   let previousFocus = null;
-  let activeLanguage = fallbackLang;
+  let activeLanguage = loadLanguage(fallbackLang);
   let isLanguageTransitioning = false;
   let activeDetailSlot = null;
+
+  const syncModalLockState = () => {
+    const hasOpenProfileModal = !!profileModal?.classList.contains('is-active');
+    const hasOpenRoadmapModal = !!roadmapModal?.classList.contains('is-active');
+    body.classList.toggle('is-modal-open', hasOpenProfileModal || hasOpenRoadmapModal);
+  };
 
   const closeProfileModal = () => {
     if (!profileModal) return;
     profileModal.classList.remove('is-active');
     profileModal.setAttribute('aria-hidden', 'true');
     body.classList.remove('is-profile-modal-open');
+    syncModalLockState();
   };
 
   const openProfileModal = (section, profileIndex) => {
@@ -1156,6 +1472,7 @@ document.addEventListener('DOMContentLoaded', () => {
     profileModal.classList.add('is-active');
     profileModal.setAttribute('aria-hidden', 'false');
     body.classList.add('is-profile-modal-open');
+    syncModalLockState();
   };
 
   const bindProfileActions = (section) => {
@@ -1180,7 +1497,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (activeDetailSlot !== null) {
-      standardNodes.push(detailKicker, detailTitle, detailReturn, detailLede, detailCopy, ...detailNavItems);
+      standardNodes.push(detailKicker, detailTitle, detailReturn, mobileDetailReturn, detailLede, detailCopy, ...detailNavItems, ...mobileDetailNavItems);
     }
 
     return {
@@ -1272,6 +1589,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!roadmapModal) return;
     roadmapModal.classList.remove('is-active');
     roadmapModal.setAttribute('aria-hidden', 'true');
+    body.classList.remove('is-roadmap-modal-open');
+    syncModalLockState();
   };
 
   const openRoadmapModal = (stepIndex) => {
@@ -1288,6 +1607,8 @@ document.addEventListener('DOMContentLoaded', () => {
     roadmapModalCopy.innerHTML = (step.paragraphs || []).map((paragraph) => `<p>${paragraph}</p>`).join('');
     roadmapModal.classList.add('is-active');
     roadmapModal.setAttribute('aria-hidden', 'false');
+    body.classList.add('is-roadmap-modal-open');
+    syncModalLockState();
   };
 
   const bindRoadmapActions = () => {
@@ -1356,6 +1677,65 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   };
 
+  const buildPlateSectionHtml = (section) => {
+    if (!section?.items?.length) return '';
+    const items = section.items.map((item) => `
+      <div class="project-index__plate-item">
+        <div class="project-index__plate-label">${item.label}</div>
+        <div class="project-index__plate-value">${item.value}</div>
+      </div>
+    `).join('');
+    return `
+      <section class="project-index__module project-index__module--plate">
+        <div class="project-index__module-header">
+          <h3 class="project-index__module-title">${section.title}</h3>
+          ${section.note ? `<p class="project-index__module-note">${section.note}</p>` : ''}
+        </div>
+        <div class="project-index__plate-grid">${items}</div>
+      </section>
+    `;
+  };
+
+  const buildScenarioSectionHtml = (section) => {
+    if (!section?.items?.length) return '';
+    const items = section.items.map((item) => `
+      <div class="project-index__scenario-item">
+        <div class="project-index__scenario-label">${item.label}</div>
+        <div class="project-index__scenario-value">${item.value}</div>
+      </div>
+    `).join('');
+    return `
+      <section class="project-index__module project-index__module--scenarios">
+        <div class="project-index__module-header">
+          <h3 class="project-index__module-title">${section.title}</h3>
+          ${section.note ? `<p class="project-index__module-note">${section.note}</p>` : ''}
+        </div>
+        <div class="project-index__scenario-grid">${items}</div>
+      </section>
+    `;
+  };
+
+  const buildDiagramSectionHtml = (section) => {
+    if (!section) return '';
+    return `
+      <section class="project-index__module project-index__module--object-diagram">
+        <div class="project-index__module-header">
+          <h3 class="project-index__module-title">${section.title || ''}</h3>
+          ${section.note ? `<p class="project-index__module-note">${section.note}</p>` : ''}
+        </div>
+        <div class="project-index__scarf-diagram" aria-label="${section.title || ''}">
+          <div class="project-index__scarf-measure project-index__scarf-measure--length">${section.lengthLabel || '190 cm'}</div>
+          <div class="project-index__scarf-body" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="project-index__scarf-fringe" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="project-index__scarf-measure project-index__scarf-measure--width">${section.widthLabel || '31 cm'}</div>
+          <div class="project-index__scarf-measure project-index__scarf-measure--fringe">${section.fringeLabel || '3.5 cm'}</div>
+        </div>
+      </section>
+    `;
+  };
+
   const buildChecklistSectionHtml = (section) => {
     if (!section?.items?.length) return '';
     const items = section.items.map((item) => `
@@ -1395,8 +1775,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const syncDetailNavItems = (cardCopy, activeSlotIndex = activeDetailSlot) => {
-    detailNavItems.forEach((button, index) => {
+  const syncDetailNavButtonSet = (items, cardCopy, activeSlotIndex = activeDetailSlot) => {
+    items.forEach((button, index) => {
       const label = cardCopy?.radial?.[index] || '';
       button.textContent = label;
       button.classList.toggle('is-hidden', !label);
@@ -1409,16 +1789,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  const scrollMobileDetailNavToActive = () => {
+    if (!mobileDetailNav || !mobileDetailNavItems.length || window.innerWidth > 820) return;
+    const activeItem = mobileDetailNavItems.find((button) => button.classList.contains('is-active'));
+    if (!activeItem || activeItem.classList.contains('is-hidden')) return;
+    requestAnimationFrame(() => {
+      activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    });
+  };
+
+  let mobileReturnVisibilityFrame = null;
+
+  const updateMobileDetailReturnVisibility = () => {
+    if (mobileReturnVisibilityFrame) return;
+    mobileReturnVisibilityFrame = requestAnimationFrame(() => {
+      mobileReturnVisibilityFrame = null;
+      const shouldShow = window.innerWidth <= 820 && body.classList.contains('is-detail-open') && window.scrollY > 156;
+      body.classList.toggle('is-mobile-detail-return-visible', shouldShow);
+    });
+  };
+
+  const resetMobileDetailReturnVisibility = () => {
+    body.classList.remove('is-mobile-detail-return-visible');
+    updateMobileDetailReturnVisibility();
+  };
+
+  const syncDetailNavItems = (cardCopy, activeSlotIndex = activeDetailSlot) => {
+    syncDetailNavButtonSet(detailNavItems, cardCopy, activeSlotIndex);
+    syncDetailNavButtonSet(mobileDetailNavItems, cardCopy, activeSlotIndex);
+    scrollMobileDetailNavToActive();
+  };
+
   const renderDetailCopy = (detailCard, detailSection, slot) => {
     if (!detailCopy) return;
     const paragraphsHtml = (detailSection?.paragraphs || []).map((paragraph) => `<p>${paragraph}</p>`).join('');
     const cardIndex = MOSCATELLI_I18N[activeLanguage].project.cards.indexOf(detailCard);
     const roadmapHtml = isRoadmapDetail(cardIndex, slot) ? buildRoadmapTimelineHtml() : '';
+    const diagramHtml = buildDiagramSectionHtml(detailSection?.diagramSection);
+    const plateHtml = buildPlateSectionHtml(detailSection?.plateSection);
     const foundersHtml = buildProfileSectionHtml(detailSection?.foundersSection);
     const economicsHtml = buildKeyValueSectionHtml(detailSection?.economicsSection);
     const allocationHtml = buildKeyValueSectionHtml(detailSection?.allocationSection);
+    const scenarioHtml = buildScenarioSectionHtml(detailSection?.scenarioSection);
     const proofHtml = buildChecklistSectionHtml(detailSection?.proofSection);
-    detailCopy.innerHTML = `${paragraphsHtml}${roadmapHtml}${foundersHtml}${economicsHtml}${allocationHtml}${proofHtml}`;
+    detailCopy.innerHTML = `${paragraphsHtml}${roadmapHtml}${diagramHtml}${plateHtml}${foundersHtml}${economicsHtml}${allocationHtml}${scenarioHtml}${proofHtml}`;
     bindRoadmapActions();
     bindProfileActions(detailSection?.foundersSection);
   };
@@ -1431,6 +1845,8 @@ document.addEventListener('DOMContentLoaded', () => {
     detailTitle.textContent = detailCard.radial[slot] || '';
     detailReturn.textContent = MOSCATELLI_I18N[activeLanguage].project.center;
     detailReturn.setAttribute('aria-label', MOSCATELLI_I18N[activeLanguage].project.centerAria);
+    if (mobileDetailReturnLabel) mobileDetailReturnLabel.textContent = MOSCATELLI_I18N[activeLanguage].project.mobileReturn || 'Return';
+    if (mobileDetailReturn) mobileDetailReturn.setAttribute('aria-label', MOSCATELLI_I18N[activeLanguage].project.centerAria);
     if (detailLede) detailLede.textContent = detailSection?.lede || '';
     renderDetailCopy(detailCard, detailSection, slot);
     setRoadmapStateClass(detailCardIndex, slot);
@@ -1442,6 +1858,7 @@ document.addEventListener('DOMContentLoaded', () => {
     activeDetailSlot = slot;
     setDetailTexts(slot);
     body.classList.add('is-detail-open');
+    resetMobileDetailReturnVisibility();
     detail.classList.remove('is-ready', 'is-switching');
     detail.classList.add('is-active');
     detail.setAttribute('aria-hidden', 'false');
@@ -1470,7 +1887,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const switchDetailSlot = (slot) => {
-    if (activeDetailSlot === null || slot === activeDetailSlot) return;
+    if (isLanguageTransitioning || activeDetailSlot === null || slot === activeDetailSlot) return;
     activeDetailSlot = slot;
     detail.classList.remove('is-switching');
     body.classList.remove('is-detail-switching', 'is-detail-switching-in');
@@ -1492,7 +1909,7 @@ document.addEventListener('DOMContentLoaded', () => {
     activeDetailSlot = null;
     closeRoadmapModal();
     detail.classList.remove('is-ready', 'is-switching', 'is-roadmap-view');
-    body.classList.remove('is-detail-open', 'is-detail-switching', 'is-detail-switching-in');
+    body.classList.remove('is-detail-open', 'is-detail-switching', 'is-detail-switching-in', 'is-mobile-detail-return-visible');
 
     if (toIndex && activeCard) {
       body.classList.add('is-detail-returning-to-index');
@@ -1634,7 +2051,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (!activeCard) return;
     if (isAnimating) {
-      window.setTimeout(closeRadial, 120);
+      window.setTimeout(() => closeRadial(fromDetail), 120);
       return;
     }
     isAnimating = true;
@@ -1697,7 +2114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.setTimeout(() => {
       radialCenter.focus();
       isAnimating = false;
-    }, 1360);
+    }, 1030);
   };
 
   applyProjectTranslations(activeLanguage);
@@ -1738,6 +2155,10 @@ document.addEventListener('DOMContentLoaded', () => {
     button.addEventListener('click', () => switchDetailSlot(Number(button.dataset.slot)));
   });
 
+  mobileDetailNavItems.forEach((button) => {
+    button.addEventListener('click', () => switchDetailSlot(Number(button.dataset.slot)));
+  });
+
   if (detailReturn) {
     detailReturn.addEventListener('click', (event) => {
       event.preventDefault();
@@ -1746,17 +2167,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  if (mobileDetailReturn) {
+    mobileDetailReturn.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      closeDetail({ toIndex: true });
+    });
+  }
+
+  window.addEventListener('scroll', updateMobileDetailReturnVisibility, { passive: true });
+  window.addEventListener('resize', updateMobileDetailReturnVisibility);
+
   radialCenter.addEventListener('click', (event) => {
     event.preventDefault();
     event.stopPropagation();
     closeRadial();
   });
 
-  radialCenter.addEventListener('pointerup', (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    closeRadial();
-  });
 
   if (roadmapModal) {
     roadmapModal.querySelectorAll('[data-roadmap-close]').forEach((node) => {
